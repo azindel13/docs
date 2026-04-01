@@ -9,6 +9,20 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Documentation",
+          "icon": "book-open-cover",
+          "href": "https://mintlify.com/docs"
+        },
+        {
+          "anchor": "Blog",
+          "icon": "newspaper",
+          "href": "https://mintlify.com/blog"
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "Guides",
@@ -30,54 +44,45 @@
           },
           {
             "group": "Clients & Sites",
+            "icon": "buildings",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
+              "",
+              "",
               "essentials/images",
               "essentials/reusable-snippets"
             ]
           },
           {
             "group": "Surveys",
+            "icon": "page-caret-down",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "",
+              "",
+              "cope",
+              "insured-values-and-loss-estimates",
+              "risk-classifications-and-scoring"
             ]
           },
           {
             "group": "Activities",
+            "icon": "list-check",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "",
+              "",
+              ""
             ]
           },
           {
-            "group": "User Management",
+            "group": "Access Management",
+            "icon": "people-roof",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "",
+              ""
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
