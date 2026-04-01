@@ -23,61 +23,66 @@
         }
       ]
     },
-    "tabs": [
+    "dropdowns": [
       {
-        "tab": "Guides",
-        "groups": [
+        "dropdown": "Portal",
+        "tabs": [
           {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Navigation",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Clients & Sites",
-            "icon": "buildings",
-            "pages": [
-              "",
-              "",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "Surveys",
-            "icon": "page-caret-down",
-            "pages": [
-              "",
-              "",
-              "cope",
-              "insured-values-and-loss-estimates",
-              "risk-classifications-and-scoring"
-            ]
-          },
-          {
-            "group": "Activities",
-            "icon": "list-check",
-            "pages": [
-              "",
-              "",
-              ""
-            ]
-          },
-          {
-            "group": "Access Management",
-            "icon": "people-roof",
-            "pages": [
-              "",
-              ""
+            "tab": "Risk Engineering Portal",
+            "groups": [
+              {
+                "group": "Getting started",
+                "pages": [
+                  "index",
+                  "quickstart",
+                  "development"
+                ]
+              },
+              {
+                "group": "Navigation",
+                "pages": [
+                  "essentials/settings",
+                  "essentials/navigation"
+                ]
+              },
+              {
+                "group": "Clients & Sites",
+                "icon": "buildings",
+                "pages": [
+                  "",
+                  "",
+                  "essentials/images",
+                  "essentials/reusable-snippets"
+                ]
+              },
+              {
+                "group": "Surveys",
+                "icon": "page-caret-down",
+                "pages": [
+                  "",
+                  "",
+                  "cope",
+                  "insured-values-and-loss-estimates",
+                  "risk-classifications-and-scoring"
+                ]
+              },
+              {
+                "group": "Activities",
+                "icon": "list-check",
+                "pages": [
+                  "",
+                  "",
+                  ""
+                ]
+              },
+              {
+                "group": "Access Management",
+                "icon": "people-roof",
+                "pages": [
+                  "",
+                  ""
+                ]
+              }
             ]
           }
         ]
