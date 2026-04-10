@@ -25,7 +25,9 @@
     },
     "dropdowns": [
       {
-        "dropdown": "Portal",
+        "dropdown": "TruRisk Portals",
+        "icon": "computer",
+        "description": "Select the risk engineering or client portal for a user guide",
         "tabs": [
           {
             "tab": "Risk Engineering Portal",
@@ -41,8 +43,8 @@
               {
                 "group": "Navigation",
                 "pages": [
-                  "essentials/settings",
-                  "essentials/navigation"
+                  "essentials/navigation",
+                  "essentials/settings"
                 ]
               },
               {
@@ -84,6 +86,9 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "Client Portal"
           }
         ]
       }

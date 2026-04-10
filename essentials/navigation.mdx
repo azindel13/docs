@@ -1,87 +1,39 @@
 ---
-title: 'Navigation'
-description: 'The navigation field in docs.json defines the pages that go in the navigation menu'
-icon: 'map'
+title: "Navigation"
+description: "The menu on the left hand side of all pages in TruRisk allows you to navigate between the different record types within your risk engineering account."
+icon: "map"
 ---
 
-The navigation menu is the list of links on every website.
+## Navigation Menu
 
-You will likely update `docs.json` every time you add a new page. Pages do not show up automatically.
+The menu on the left hand side of all pages in TruRisk allows you to navigate between the different record types within your risk engineering account.
 
-## Navigation syntax
+### Home
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+A dashboard with charts and tables relevant to your user type. 
 
-<CodeGroup>
+### Clients
 
-```json Regular Navigation
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Getting Started",
-          "pages": ["quickstart"]
-        }
-      ]
-    }
-  ]
-}
-```
+### Surveys
 
-```json Nested Navigation
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Getting Started",
-          "pages": [
-            "quickstart",
-            {
-              "group": "Nested Reference Pages",
-              "pages": ["nested-reference-page"]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
+### Recommendations
 
-</CodeGroup>
+### Activity Library
 
-## Folders
+### Change Log
 
-Simply put your MDX files in folders and update the paths in `docs.json`.
+### Teams
 
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+<Info>
+  This feature is available only for users with 'administrator' permissions.
+</Info>
 
-<Warning>
+### Users
 
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
+<Info>
+  This feature is available only for users with 'administrator' permissions.
+</Info>
 
-</Warning>
+## Tabs Within Records
 
-```json Navigation With Folder
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Group Name",
-          "pages": ["your-folder/your-page"]
-        }
-      ]
-    }
-  ]
-}
-```
-
-## Hidden pages
-
-MDX files not included in `docs.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+When you open a Client, Site, Survey, or User record, you can navigate
