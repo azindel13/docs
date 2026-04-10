@@ -12,83 +12,148 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "icon": "book-open-cover",
-          "href": "https://mintlify.com/docs"
+          "anchor": "Home",
+          "icon": "house",
+          "href": "/"
         },
         {
-          "anchor": "Blog",
-          "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
+          "anchor": "FAQs",
+          "icon": "book-open-cover",
+          "href": "/faqs"
+        },
+        {
+          "anchor": "Contact Us",
+          "icon": "envelope",
+          "href": "/contact-us"
         }
       ]
     },
     "dropdowns": [
       {
-        "dropdown": "TruRisk Portals",
+        "dropdown": "Risk Engineer",
         "icon": "computer",
-        "description": "Select the risk engineering or client portal for a user guide",
-        "tabs": [
+        "description": "User guide",
+        "groups": [
           {
-            "tab": "Risk Engineering Portal",
-            "groups": [
-              {
-                "group": "Getting started",
-                "pages": [
-                  "index",
-                  "quickstart",
-                  "development"
-                ]
-              },
-              {
-                "group": "Navigation",
-                "pages": [
-                  "essentials/navigation",
-                  "essentials/settings"
-                ]
-              },
-              {
-                "group": "Clients & Sites",
-                "icon": "buildings",
-                "pages": [
-                  "",
-                  "",
-                  "essentials/images",
-                  "essentials/reusable-snippets"
-                ]
-              },
-              {
-                "group": "Surveys",
-                "icon": "page-caret-down",
-                "pages": [
-                  "",
-                  "",
-                  "cope",
-                  "insured-values-and-loss-estimates",
-                  "risk-classifications-and-scoring"
-                ]
-              },
-              {
-                "group": "Activities",
-                "icon": "list-check",
-                "pages": [
-                  "",
-                  "",
-                  ""
-                ]
-              },
-              {
-                "group": "Access Management",
-                "icon": "people-roof",
-                "pages": [
-                  "",
-                  ""
-                ]
-              }
+            "group": "Getting started",
+            "pages": [
+              "how-to-register-an-account",
+              "logging-in-to-the-portal",
+              "creating-a-password"
             ]
           },
           {
-            "tab": "Client Portal"
+            "group": "Navigation",
+            "pages": [
+              "the-navigation-menu",
+              "records-and-tabs"
+            ]
+          },
+          {
+            "group": "Clients & Sites",
+            "icon": "buildings",
+            "pages": [
+              "adding-clients",
+              "bulk-importing-clients",
+              "the-client-record",
+              "creating-sites",
+              "bulk-importing-sites",
+              "the-site-record"
+            ]
+          },
+          {
+            "group": "Surveys",
+            "icon": "page-caret-down",
+            "pages": [
+              "creating-survey-records",
+              "overview-of-surveys-and-statuses",
+              "cope",
+              "recommendations",
+              "risk-classifications-and-scoring"
+            ]
+          },
+          {
+            "group": "Activities",
+            "icon": "list-check",
+            "pages": [
+              "activities-overview",
+              "activity-templates",
+              "scheduling-activities",
+              "activity-records"
+            ]
+          },
+          {
+            "group": "Access Management",
+            "icon": "people-roof",
+            "pages": [
+              "user-roles-and-permissions",
+              "creating-and-managing-users",
+              "team-management"
+            ]
+          }
+        ]
+      },
+      {
+        "dropdown": "Client Portal",
+        "icon": "users",
+        "description": "User guide",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "client-how-to-register-an-account",
+              "client-logging-in-to-the-portal",
+              "client-creating-a-password"
+            ]
+          },
+          {
+            "group": "Navigation",
+            "pages": [
+              "client-the-navigation-menu",
+              "client-records-and-tabs"
+            ]
+          },
+          {
+            "group": "Clients & Sites",
+            "icon": "buildings",
+            "pages": [
+              "client-adding-clients",
+              "client-bulk-importing-clients",
+              "client-the-client-record",
+              "client-creating-sites",
+              "client-bulk-importing-sites",
+              "client-the-site-record"
+            ]
+          },
+          {
+            "group": "Surveys",
+            "icon": "page-caret-down",
+            "pages": [
+              "client-creating-survey-records",
+              "client-overview-of-surveys-and-statuses",
+              "client-cope",
+              "client-recommendations",
+              "client-risk-classifications-and-scoring"
+            ]
+          },
+          {
+            "group": "Activities",
+            "icon": "list-check",
+            "pages": [
+              "client-activities-overview",
+              "client-activity-templates",
+              "client-scheduling-activities",
+              "client-activity-records"
+            ]
+          },
+          {
+            "group": "Access Management",
+            "icon": "people-roof",
+            "pages": [
+              "client-user-roles-and-permissions",
+              "client-creating-and-managing-users",
+              "client-team-management"
+            ]
           }
         ]
       }
@@ -107,8 +172,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Home",
+      "href": "/"
     }
   },
   "contextual": {
