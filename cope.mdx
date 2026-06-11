@@ -1,4 +1,122 @@
 ---
 title: "COPE"
+description: "How to complete COPE data for a survey in TruRisk."
 icon: "building-circle-exclamation"
 ---
+
+COPE stands for **Construction, Occupancy, Protection, and Exposure**. It is the structured dataset that captures the physical and operational characteristics of a site, and forms the foundation of the risk assessment for that survey.
+
+To add COPE data, open the survey record, go to the **COPE** tab, and click **Add Cope**.
+
+<Info>
+  Units can be toggled between **Metric** and **Imperial** at the top of the Construction section.
+</Info>
+
+## Construction
+
+Captures information about how the site is built.
+
+**Overall construction:**
+
+| Field | Description |
+|-------|-------------|
+| ISO Class | The site's ISO construction classification |
+| Fire Resistant (%) | Percentage of the facility that is fire resistant |
+| Non-Combustible (%) | Percentage that is non-combustible |
+| Combustible (%) | Percentage that is combustible |
+
+**Building details:**
+
+Each building at the site can be captured separately. Click **Add Building** to add additional buildings.
+
+| Field | Description |
+|-------|-------------|
+| Name | Building identifier or name |
+| Building Construction | Construction type for this building |
+| Number of Stories High | Above-ground stories |
+| Height | Building height |
+| Number of Basement Levels | Below-ground levels |
+| Total Floor Area | Total floor area (ft² or m²) |
+| Number of Fire Areas | Number of distinct fire compartments |
+| Construction Year | Year the building was constructed |
+| Last Addition Year | Year of the most recent addition or major renovation |
+
+A free-text **Narrative** field is also available for additional construction notes.
+
+## Occupancy
+
+Captures how the site is used and who works there.
+
+| Field | Description |
+|-------|-------------|
+| Industry Classification | Industry sector |
+| SIC Code | Standard Industrial Classification code |
+| Number of Employees | Total headcount |
+| Working Days per Week | Typical working days |
+| Working Hours per Day | Typical working hours |
+
+**Facility Function Allocation** — enter the percentage of the facility dedicated to each function:
+
+Manufacturing, Warehousing, Office, Retail, Other.
+
+## Protection
+
+Captures all fire protection, security, and emergency response measures in place at the site.
+
+**Inspections** — record whether the following are in place and up to date: Automatic Sprinkler Valve Inspections, Fire Pump Inspections, Alarm Testing, Fire Door Maintenance Test, Extinguisher Maintenance Inspection.
+
+**Management** — rate practices across: Housekeeping, Surveillance, Smoking Controls, General Maintenance, Contractor Supervision, Hot Work Monitoring, Impairments Handling, Emergency Organisation, Management of Change.
+
+**Water Supply:**
+
+| Field | Description |
+|-------|-------------|
+| Water Supply Evaluation | Overall assessment of water supply adequacy |
+| Water Supply Duration | Estimated supply duration |
+| Public Water Supply Type | Type of municipal supply |
+| Private Water Supply Type | Type of on-site supply (if applicable) |
+
+**Sprinklers:**
+
+| Field | Description |
+|-------|-------------|
+| Automatic Sprinklers Evaluation | Overall sprinkler system assessment |
+| Adequate Design (%) | Proportion of facility with adequate sprinkler design |
+| Deficient Design (%) | Proportion with deficient design |
+| Area Needing Sprinklers (%) | Unsprinklered area that should be covered |
+| Area Not Needing Sprinklers (%) | Area where sprinklers are not required |
+| Sprinkler Valves Locked? | Yes / No |
+| Waterflow Alarm? | Yes / No |
+| Fire Pump Monitored? | Yes / No |
+| Valve Tamper Alarms? | Yes / No |
+
+**Other Fire Protection** — Special Hazards Protection Evaluation; presence of Special Protection, Hose, Hydrants, Extinguishers.
+
+**Fire Detection** — Alarms, Other Alarms, Smoke or Heat Detectors, Intrusion Detection.
+
+**Emergency Response:**
+
+| Field | Description |
+|-------|-------------|
+| ISO Community Rating | Local fire department ISO rating |
+| Emergency Organisation Type | Public / private / brigade |
+| Public Fire Department Type | Department classification |
+| Nearest Fire Department | Distance to nearest station |
+| Emergency Organisation Training | Training frequency and type |
+
+**Infrared Inspection** — Infrared Scans (Yes / No), Infrared Inspection Organisation.
+
+**External Fire Exposure** — documents exposure risks from neighbouring properties or processes.
+
+## Exposure
+
+Captures hazard and storage information that affects the site's risk profile.
+
+| Field | Description |
+|-------|-------------|
+| Occupancy Hazard Class | Classification of the primary occupancy hazard |
+| Common Hazards | Typical hazards associated with the occupancy |
+| Special Hazards | Unusual or elevated hazards present |
+| Storage Type | Type of goods or materials stored |
+| Max. Storage Height | Maximum height of stored goods |
+| Commodity Class | Commodity classification for storage risk assessment |

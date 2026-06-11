@@ -66,9 +66,11 @@
             "icon": "page-caret-down",
             "pages": [
               "creating-survey-records",
+              "the-survey-record",
               "overview-of-surveys-and-statuses",
               "cope",
               "recommendations",
+              "insured-values-and-loss-estimates",
               "risk-classifications-and-scoring"
             ]
           },

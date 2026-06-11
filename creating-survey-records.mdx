@@ -1,26 +1,52 @@
 ---
 title: "Creating survey records"
-description: "Guide for creating survey records in the TruRisk portal."
+description: "How to create a new survey for a site in TruRisk."
 ---
 
-## Overview
-
-Use this page to document how to creating survey records in the TruRisk portal.
+Surveys are always created at the site level. Each survey captures the findings from an engineer's site visit and drives the risk profile, recommendations, and reports for that site.
 
 ## Steps
 
 <Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
+  <Step title="Open the site record">
+    Click **Clients** in the left navigation bar, select the client, then click the site you want to survey. You can also access surveys directly from **Surveys** in the left nav.
   </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
+  <Step title="Go to the Surveys tab">
+    Click the **Surveys** tab on the site record, then click **+ Add Survey**.
   </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
+  <Step title="Complete survey details">
+    Fill in the survey information:
+
+    | Field | Required | Notes |
+    |-------|----------|-------|
+    | Name | No | A descriptive name for this survey |
+    | Company Name | No | Pre-filled with the parent client |
+    | Site Name | No | Pre-filled with the site |
+    | Status | No | The current stage of the survey. Defaults to **Planning** |
+    | Visit Date | No | The date of the site visit |
+    | Survey Company | No | The risk engineering company conducting the survey |
+    | Type | Yes | **Property** or **Energy** — see below |
+    | Assigned Engineer | No | The engineer responsible for this survey |
+
+  </Step>
+  <Step title="Save the record">
+    Click **Save Changes**. The survey record will open and the survey will appear under the site's Surveys tab.
   </Step>
 </Steps>
 
+## Survey types
+
+The **Type** field determines which risk classifications and scoring categories are available within the survey, and which Word export template is used when generating the report.
+
+| Type | Use for |
+|------|---------|
+| **Property** | Standard property risk surveys |
+| **Energy** | Energy sector surveys |
+
 <Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
+  Survey type cannot be changed after the survey is saved. Make sure to select the correct type before creating the record.
 </Info>
+
+## Survey statuses
+
+Surveys move through a defined lifecycle as work progresses. See [Survey statuses](/overview-of-surveys-and-statuses) for a full description of each stage.

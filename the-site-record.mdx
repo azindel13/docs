@@ -1,26 +1,78 @@
 ---
 title: "The site record"
-description: "Guide for the site record in the TruRisk portal."
+description: "An overview of the site record in TruRisk, including tabs, site details, and key fields."
 ---
 
-## Overview
+The site record holds everything related to a specific property — its details, surveys, recommendations, activities, and risk profile. You land here after creating a site or clicking one from the client's Sites tab.
 
-Use this page to document how to the site record in the TruRisk portal.
+## Header
 
-## Steps
+The top of the record shows the site name and its parent client ("at [Client Name]"). Two actions are always available:
 
-<Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
-  </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
-  </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
-  </Step>
-</Steps>
+- **Edit Site** — update site details, address, or summary
+- **Schedule Activity** — create a new activity for this site
 
-<Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
-</Info>
+## Tabs
+
+<AccordionGroup>
+  <Accordion title="Site Overview">
+    The default view. Shows:
+    - **Site Details** — key site information (see below)
+    - **Recent Updates** — a live audit trail of changes to this record
+    - **Site Summary** — a free-text area for notes. Click **Edit Site** to add or update it.
+  </Accordion>
+  <Accordion title="Activities">
+    All activities logged or scheduled for this site. See [Activities overview](/activities-overview) and [Scheduling activities](/scheduling-activities) for more detail.
+  </Accordion>
+  <Accordion title="Surveys">
+    All surveys created for this site. Start a new survey from here. See [Creating survey records](/creating-survey-records), [The survey record](/the-survey-record), and [Survey statuses](/overview-of-surveys-and-statuses) for more detail.
+  </Accordion>
+  <Accordion title="Recommendations">
+    All recommendations raised across this site's surveys. See [Recommendations](/recommendations) for more detail.
+  </Accordion>
+  <Accordion title="Documents">
+    Files attached to this site record.
+  </Accordion>
+  <Accordion title="Contacts">
+    Contacts associated with this site.
+  </Accordion>
+  <Accordion title="Change Log">
+    A full audit trail of all changes made to this site record.
+  </Accordion>
+  <Accordion title="Risk Profile">
+    The site's risk profile, populated from completed surveys. See [Risk classifications and scoring](/risk-classifications-and-scoring) for more detail.
+  </Accordion>
+</AccordionGroup>
+
+## Site details panel
+
+The left panel on Site Overview surfaces key information at a glance.
+
+| Field | Description |
+|-------|-------------|
+| Coordinates | GPS coordinates. Add coordinates to display a satellite image of the site. |
+| Address | The site's physical address |
+| ISO Class | The site's construction classification (see below) |
+| SIC Code | Standard Industrial Classification code |
+| Date of Last Visit | Date of the most recent survey visit |
+| Date of Next Visit | Date of the next scheduled survey |
+| Total Insured Value | The site's total insured value |
+
+### ISO classes
+
+| Class | Description |
+|-------|-------------|
+| N/A | Not applicable |
+| Class 1 | Frame |
+| Class 2 | Joisted masonry |
+| Class 3 | Noncombustible |
+| Class 4 | Masonry noncombustible |
+| Class 5 | Modified fire resistive |
+| Class 6 | Fire resistive |
+
+## Right panel
+
+The right panel shows:
+- **TruRisk Score** — the site's current risk index, calculated from completed surveys
+- **Recommendations** — a summary of open recommendations for this site
+- **Site Contacts** — contacts associated with this site

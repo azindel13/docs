@@ -1,26 +1,57 @@
 ---
 title: "Creating sites"
-description: "Guide for creating sites in the TruRisk portal."
+description: "How to add a site to a client record in TruRisk."
 ---
 
-## Overview
-
-Use this page to document how to creating sites in the TruRisk portal.
+Sites represent the individual properties or locations belonging to a client. Surveys are always created at the site level, so you'll need at least one site before you can start a survey.
 
 ## Steps
 
 <Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
+  <Step title="Open the client record">
+    Click **Clients** in the left navigation bar, then select the client you want to add a site to.
   </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
+  <Step title="Go to the Sites tab">
+    Click the **Sites** tab on the client record.
   </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
+  <Step title="Open the create form">
+    Click **Add Site** in the top-right corner.
+  </Step>
+  <Step title="Complete site details">
+    Fill in the site information:
+
+    | Field | Required | Notes |
+    |-------|----------|-------|
+    | Site Name | No | A descriptive name for this location |
+    | Company Name | No | Pre-filled with the parent client name |
+    | ISO Class | No | The site's construction classification. Options: N/A, Class 1 (Frame), Class 2 (Joisted masonry), Class 3 (Noncombustible), Class 4 (Masonry noncombustible), Class 5 (Modified fire resistive), Class 6 (Fire resistive) |
+    | Currency | No | Pre-filled with the client's currency |
+    | SIC Code | No | Standard Industrial Classification code. Use **Search SIC Codes** to find the right one |
+
+  </Step>
+  <Step title="Complete site address">
+    Enter the site's address:
+
+    | Field | Required |
+    |-------|----------|
+    | Country | Yes |
+    | Address Line 1 | No |
+    | Address Line 2 | No |
+    | City | Yes |
+    | State / Province | No |
+    | Postal Code | No |
+    | GPS Coordinates | No |
+
+    For GPS Coordinates, you can type coordinates directly or click **Find address** to locate the site on the map.
+  </Step>
+  <Step title="Add a site summary (optional)">
+    Use the **Site Summary** field to add any notes or context about this site.
+  </Step>
+  <Step title="Save the record">
+    Click **Save Changes**. The site will appear under the client's Sites tab.
   </Step>
 </Steps>
 
-<Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
-</Info>
+<Tip>
+  The GPS Coordinates map is useful for confirming the exact location of a site, especially for large or multi-building properties.
+</Tip>

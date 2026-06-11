@@ -1,26 +1,34 @@
 ---
-title: "Overview of surveys and statuses"
-description: "Guide for overview of surveys and statuses in the TruRisk portal."
+title: "Survey statuses"
+description: "How surveys progress through their lifecycle in TruRisk."
 ---
 
-## Overview
+Every survey in TruRisk has a status that reflects its current stage. Statuses are set manually by the engineer and help the team track progress from initial planning through to report delivery.
 
-Use this page to document how to overview of surveys and statuses in the TruRisk portal.
+## Statuses
 
-## Steps
+| Status | Meaning |
+|--------|---------|
+| **Planning** | The survey has been created and the engineer is preparing for the site visit. |
+| **Visit scheduled** | A visit date has been confirmed. |
+| **Visit completed** | The site visit has taken place. The engineer is now capturing findings. |
+| **Review** | Survey data and findings are being reviewed internally before the report is issued. |
+| **Report issued** | The survey report has been finalised and issued to the client. |
 
-<Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
-  </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
-  </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
-  </Step>
-</Steps>
+## Changing a survey's status
 
-<Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
-</Info>
+Status is updated from the **Edit Survey** form. Open the survey record, click **Edit Survey**, and select the new status from the **Status** dropdown.
+
+<Tip>
+  Update the status as work progresses to keep the client's survey timeline accurate. The status is reflected on the client record, site record, and the main Surveys list.
+</Tip>
+
+## Workflow overview
+
+Surveys typically flow in order from Planning through to Report issued, though engineers can move to any status at any time.
+
+```
+Planning → Visit scheduled → Visit completed → Review → Report issued
+```
+
+Each status change is recorded in the survey's [Change Log](/the-survey-record).

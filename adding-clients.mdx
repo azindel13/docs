@@ -1,26 +1,51 @@
 ---
 title: "Adding clients"
-description: "Guide for adding clients in the TruRisk portal."
+description: "How to create a new client record in TruRisk."
 ---
 
-## Overview
-
-Use this page to document how to adding clients in the TruRisk portal.
+Client records are the starting point for all surveys, sites, and activities in TruRisk. Each client represents an organisation you're managing risk for.
 
 ## Steps
 
 <Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
+  <Step title="Go to Clients">
+    Click **Clients** in the left navigation bar.
   </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
+  <Step title="Open the create form">
+    Click **+ Add Client** in the top-right corner.
   </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
+  <Step title="Complete client details">
+    Fill in the client information:
+
+    | Field | Required | Notes |
+    |-------|----------|-------|
+    | Name | Yes | The client's organisation name |
+    | Account Number | No | Your internal reference number |
+    | Currency | No | Default currency for this client |
+    | Sector | Yes | Industry sector dropdown |
+    | SIC Code | No | Standard Industrial Classification code. Use **Search SIC Codes** to find the right one |
+    | Logo | No | Drag and drop or click **Browse** to upload |
+
+  </Step>
+  <Step title="Complete client address">
+    Enter the client's main property address:
+
+    | Field | Required |
+    |-------|----------|
+    | Country | Yes |
+    | Address Line 1 | No |
+    | Address Line 2 | No |
+    | City | Yes |
+    | State / Province | No |
+    | Postal Code | No |
+    | GPS Coordinates | No |
+
+  </Step>
+  <Step title="Save the record">
+    Click **Save Changes** in the top-right corner. The client record will appear in your Clients list.
   </Step>
 </Steps>
 
-<Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
-</Info>
+<Tip>
+  Fields marked with an asterisk (*) are required. You won't be able to save the record until Name, Sector, Country, and City are filled in.
+</Tip>

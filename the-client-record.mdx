@@ -1,26 +1,93 @@
 ---
 title: "The client record"
-description: "Guide for the client record in the TruRisk portal."
+description: "An overview of the client record in TruRisk, including tabs, status, and key details."
 ---
 
-## Overview
+The client record is the central hub for everything related to a client — their risk profile, sites, surveys, activities, recommendations, and more. You land here after creating a client or clicking one from the Clients list.
 
-Use this page to document how to the client record in the TruRisk portal.
+## Header
 
-## Steps
+The top of the record shows the client's name and primary address. Two actions are always available here:
 
-<Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
-  </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
-  </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
-  </Step>
-</Steps>
+- **Edit Client** — update client details, address, or policy information
+- **Schedule Activity** — create a new activity for this client
+
+The **`···`** menu contains additional options including archiving or deleting the client.
+
+## Status
+
+Each client has a status that controls whether they can access their TruRisk Client Portal.
+
+| Status | Meaning |
+|--------|---------|
+| **Pending** | Default on creation. Engineers are building out the client's risk profile. The client cannot access the portal yet. |
+| **Active** | The engineer is ready to share reports. The client gains access to their portal. |
+| **Disabled** | The client is no longer active. Portal access is removed. |
 
 <Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
+  Status can only be changed by admin users.
 </Info>
+
+## Tabs
+
+The client record is organised into tabs. Each tab groups related information.
+
+<AccordionGroup>
+  <Accordion title="Client Overview">
+    The default view when you open a client record. Shows:
+    - **TruRisk Score** — the client's current risk index, calculated from completed surveys
+    - **Recommendations** — a summary of open recommendations
+    - **Recent Updates** — recent activity on this record
+    - **Upcoming Events** — scheduled activities
+    - **Client Summary** — a free-text area for notes and context about the client
+  </Accordion>
+  <Accordion title="Sites">
+    Lists all sites associated with this client. From here you can add new sites or open an existing site record. See [Creating sites](/creating-sites) and [The site record](/the-site-record) for more detail.
+  </Accordion>
+  <Accordion title="Activities">
+    Shows all activities logged or scheduled for this client across all sites. See [Activities overview](/activities-overview) and [Scheduling activities](/scheduling-activities) for more detail.
+  </Accordion>
+  <Accordion title="Surveys">
+    Lists all surveys created for this client. You can create a new survey or open an existing one from here. See [Creating survey records](/creating-survey-records) and [Survey statuses](/overview-of-surveys-and-statuses) for more detail.
+  </Accordion>
+  <Accordion title="Recommendations">
+    All recommendations raised across this client's surveys, with their current status. See [Recommendations](/recommendations) for more detail.
+  </Accordion>
+  <Accordion title="Documents">
+    Files attached to this client record.
+  </Accordion>
+  <Accordion title="Contacts">
+    Contact people associated with this client.
+  </Accordion>
+  <Accordion title="Change Log">
+    A full audit trail of changes made to this client record.
+  </Accordion>
+  <Accordion title="Teams">
+    The internal teams assigned to manage this client. See [Team management](/team-management) for more detail.
+  </Accordion>
+</AccordionGroup>
+
+## Client details panel
+
+The right-hand panel surfaces key information at a glance.
+
+**Client Details**
+
+| Field | Description |
+|-------|-------------|
+| Status | Current client status (Pending / Active / Disabled) |
+| Account Number | Your internal reference number |
+| SIC | Standard Industrial Classification code |
+| Sector | Industry sector |
+| TIV | Total Insured Value across all sites |
+| Last Survey | Date of the most recent survey |
+| Next Survey | Date of the next scheduled survey |
+
+**Policy Details**
+
+| Field | Description |
+|-------|-------------|
+| Expiration Date | Policy expiry date |
+| Coverage | Coverage type or amount |
+| Carrier | Insurance carrier name |
+| Policy No. | Policy reference number |

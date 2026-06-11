@@ -1,26 +1,104 @@
 ---
 title: "Recommendations"
-description: "Guide for recommendations in the TruRisk portal."
+description: "How to add and manage recommendations in a TruRisk survey."
 ---
 
-## Overview
+Recommendations are the actionable findings raised as part of a survey. Each recommendation captures what was found, the risk it presents, what action should be taken, and who is responsible.
 
-Use this page to document how to recommendations in the TruRisk portal.
+Recommendations are created from the **Recommendations** tab on a survey record. They also roll up to the site record and client record so engineers and clients can track them across the portfolio.
 
-## Steps
+## Adding a recommendation
 
-<Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
-  </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
-  </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
-  </Step>
-</Steps>
+From the survey's **Recommendations** tab, click **+ Add Recommendation**.
 
-<Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
-</Info>
+### Recommendation details
+
+| Field | Notes |
+|-------|-------|
+| Recommendation Name | A short title describing the finding |
+| Recommendation ID | Auto-generated reference number (e.g. 2026.01) |
+| Status | Current status of the recommendation. Defaults to **New** |
+| Date Issued | Date the recommendation was raised. Defaults to today |
+| Survey Reference | Pre-filled with the current survey |
+| Due Date | Target date for completion |
+
+### Area details
+
+| Field | Notes |
+|-------|-------|
+| Building / Structure | The specific building or structure where the finding was made |
+| Area Coordinates | Location reference within the site |
+
+### Risk classification
+
+Select the **Risk Classification** category from the dropdown. This groups the recommendation by the area of risk it relates to (e.g. fire protection, management).
+
+### Risk category
+
+The risk category is determined using a **5×5 risk matrix**. Select the cell that best represents the combination of consequence and probability.
+
+**Consequences (columns A–E):**
+
+| Code | Level |
+|------|-------|
+| A | Not Significant |
+| B | Minor |
+| C | Moderate |
+| D | Major |
+| E | Severe |
+
+**Probability (rows 1–5):**
+
+| Code | Level |
+|------|-------|
+| 1 | Impractical |
+| 2 | Not Likely |
+| 3 | Possible |
+| 4 | Likely |
+| 5 | Certain |
+
+The matrix is colour-coded green (low), amber (medium), and red (high). Selecting a cell auto-calculates the **Calculated Risk** score.
+
+### Risk priority
+
+| Field | Notes |
+|-------|-------|
+| Priority | The urgency of the recommendation (e.g. High, Medium, Low) |
+| Client Classification | Internal classification label for the client-facing report |
+
+### Finding description
+
+A rich-text field for describing what was observed during the survey. Supports formatting, images, and embedded content.
+
+### Recommendation
+
+A rich-text field for the recommended corrective action. This text appears in the issued report.
+
+### Loss estimates
+
+An expandable section for attaching a loss estimate value to this recommendation — the expected cost of the loss if the finding is not addressed.
+
+### Recommendation contact
+
+Assign a site contact to this recommendation. Useful for tracking who is responsible for implementation.
+
+## The recommendations list
+
+The **Recommendations** tab shows all recommendations for a survey in a filterable table.
+
+| Column | Description |
+|--------|-------------|
+| Reference | Auto-generated ID |
+| Risk Level | The calculated risk score from the matrix |
+| Recommendation | Short summary of the recommendation |
+| Priority | High / Medium / Low |
+| Loss Est. | Estimated loss value |
+| Status | Current recommendation status |
+
+Filter by **Year**, **Risk Category**, **Priority**, or **Status**. Use the search bar to find specific recommendations by keyword.
+
+The summary cards at the top of the tab show an aggregate breakdown of recommendations by **Status**, **Priority**, and **Estimated Loss Before Completion**.
+
+<Tip>
+  Use the currency toggle (¥££) in the top-right of the tab to switch the displayed currency for loss estimate values.
+</Tip>

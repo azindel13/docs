@@ -1,6 +1,80 @@
 ---
-title: "Risk Classifications & Scoring"
+title: "Risk classifications and scoring"
+description: "How risk classifications and scores work in TruRisk surveys."
 icon: "gauge-high"
 ---
 
-/
+Risk classifications are how engineers rate the quality of risk controls and conditions at a site. Scores from individual classifications roll up into an overall survey score, which in turn drives the TruRisk Score for the site and client.
+
+To enter classifications, open a survey record and go to the **Risk Classification** tab, then click **Add Risk Classification**.
+
+<Info>
+  The specific risk elements available depend on the survey type. Different survey types have different classification structures and scoring methodologies.
+</Info>
+
+## Risk elements
+
+The Risk Classification page displays a hierarchical table of **Risk Elements** — the categories and sub-categories that the engineer scores. The specific elements available depend on the survey type configured for that survey.
+
+The table columns also vary by survey type, as described in the sections below.
+
+## Property surveys
+
+For Property surveys, the engineer rates each scorable element using two dropdowns — one for the site's **current** condition and one for its **potential** condition if recommended improvements are implemented.
+
+| Column | Description |
+|--------|-------------|
+| Current Classification | The engineer's rating of the site's current condition |
+| Potential Classification | The engineer's rating of the site's potential if recommendations are implemented |
+| Current Score | Numerical score calculated from the current classification |
+| Potential Score | Numerical score calculated from the potential classification |
+
+For each scorable element, the engineer selects from a set of rating options that range from the lowest to the highest standard of risk control. Each selection is converted to a numerical score automatically.
+
+<Info>
+  Leaving a classification blank is treated as **not applicable** — it is excluded from the score calculation entirely, not counted as zero. This ensures that elements which don't apply to a site don't unfairly affect the overall score.
+</Info>
+
+## Energy surveys
+
+For Energy surveys, the engineer scores each element using two separate inputs:
+
+| Column | Description |
+|--------|-------------|
+| System Score | A numerical rating (on a defined scale) representing how well the site's systems are designed and set up to manage that risk element |
+| Compliance Score | A percentage (0%–100%) representing how well the site actually complies with and adheres to those systems in practice |
+| Current Score | Automatically calculated as System Score × Compliance Score |
+| Current Classification | The classification band derived from the calculated current score |
+
+The **element score** is the product of the system score and the compliance percentage. This approach separates the quality of a site's risk management systems from the degree to which those systems are actually followed.
+
+<Info>
+  As with Property surveys, leaving both inputs blank for an element treats it as **not applicable** and excludes it from the score calculation.
+</Info>
+
+## Hierarchical scoring
+
+Risk elements are organised in a hierarchy for both survey types. Some elements are **parent rows** that group related sub-classifications beneath them. The rules are:
+
+- **Leaf-level elements** (those with no children) are the ones the engineer scores directly.
+- **Parent elements** do not have direct score inputs. Their score is automatically calculated as the **weighted average** of all their scored children.
+- There can be multiple levels of nesting — a parent can itself be nested under another parent.
+- The **Overall** row at the bottom of the table shows the weighted average across all top-level elements, and represents the final score for the survey.
+
+## Narratives
+
+A free-text narrative can be added to any classification level using the **Add Narrative** link. Narratives are visible in the editor and can be shown or hidden using the **Hide/Show Narratives** toggle at the top of the page.
+
+## Engineer classification override
+
+Below the Risk Elements table is an **Engineer Classification** section. This allows the engineer to manually override the calculated overall classification with their own professional judgement — for example, if they believe the calculated score doesn't fully reflect the site's risk profile. A narrative can also be added to explain the override.
+
+## How scores roll up
+
+Scores from individual risk classifications feed into a broader scoring hierarchy:
+
+1. **Survey score** — the weighted average of all top-level risk elements in the survey (the Overall row).
+2. **Site score** — the score from the site's most recent survey becomes the current score for that site.
+3. **Client score** — calculated as the weighted average of all sites in the client record, weighted by each site's **Total Insured Value (TIV)**. Sites with higher TIV have a proportionally greater influence on the client's overall score.
+
+The resulting scores are displayed as the **TruRisk Score** on the site record and client record.

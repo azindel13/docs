@@ -1,4 +1,65 @@
 ---
-title: "Loss Estimates & Insured Values"
+title: "Insured values and loss estimates"
+description: "How to record loss estimates and insured values in a TruRisk survey."
 icon: "money-check-dollar-pen"
 ---
+
+The **Loss Estimate** tab on a survey record captures the financial exposure associated with the site — both the estimated loss under different scenarios and the total insured values across asset categories.
+
+To add loss estimate data, open the survey record, go to the **Loss Estimate** tab, and click **Add Loss Estimate**.
+
+## Loss estimates
+
+Three standard loss scenarios are captured for each survey. Each scenario records a **Property** value and a **Business Interruption** value, with a calculated total.
+
+### Anticipated Probable Loss (APL)
+
+The loss expected under normal conditions, assuming protection systems perform as intended.
+
+| Field | Description |
+|-------|-------------|
+| Property | Anticipated property damage |
+| Business Interruption | Anticipated BI loss |
+| Total APL | Auto-calculated sum |
+
+### Probable Maximum Loss (PML)
+
+The loss expected under a severe but credible scenario, assuming some protection systems fail or are impaired.
+
+| Field | Description |
+|-------|-------------|
+| Property | PML property damage |
+| Business Interruption | PML business interruption loss |
+| Total PML | Auto-calculated sum |
+
+A **Probable Maximum Loss Narrative** field is available to document the assumptions behind the PML estimate.
+
+### Maximum Foreseeable Loss (MFL)
+
+The loss expected under the worst credible scenario, assuming all protection systems fail.
+
+| Field | Description |
+|-------|-------------|
+| Property | MFL property damage |
+| Business Interruption | MFL business interruption loss |
+| Total MFL | Auto-calculated sum |
+
+## Total insured value (TIV)
+
+The TIV section captures the insured value of the site broken down by asset category.
+
+| Category | Description |
+|----------|-------------|
+| Building | Insured value of the building structure |
+| Machinery & Equipment | Insured value of plant and equipment |
+| Stock | Insured value of raw materials, WIP, and finished goods |
+| Business Interruption (12 months) | Annual BI coverage limit |
+| Other | Any other insured values |
+
+## Loss estimate narrative
+
+A free-text field for documenting methodology, assumptions, or commentary on the loss estimates.
+
+<Info>
+  Currency is inherited from the client record. TIV values feed into the **Total Insured Value** shown in the Survey Details panel and the **Estimated Loss** summary on the Recommendations tab.
+</Info>
