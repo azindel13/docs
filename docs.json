@@ -35,14 +35,16 @@
           "how-to-register-an-account",
           "logging-in-to-the-portal",
           "creating-a-password"
-        ]
+        ],
+        "icon": "circle-play"
       },
       {
         "group": "Navigation",
         "pages": [
           "the-navigation-menu",
           "records-and-tabs"
-        ]
+        ],
+        "icon": "sidebar"
       },
       {
         "group": "Clients & Sites",

@@ -1,7 +1,6 @@
 ---
 title: "Bulk importing clients"
 description: "How to import multiple clients and sites at once using a spreadsheet."
-icon: "file-import"
 ---
 
 The bulk import tool lets you create multiple client and site records at once by uploading a spreadsheet. Each row in the file represents one site — company details are repeated on each row for any sites belonging to the same client.
@@ -23,7 +22,7 @@ Accepted formats: `.xlsx`, `.csv`
 TruRisk automatically attempts to match your file's column headers to the corresponding fields in the platform. The mapping screen shows three columns:
 
 | Column | Description |
-|--------|-------------|
+| --- | --- |
 | TruRisk Field | The field name in TruRisk |
 | Headers | The matched column from your file (or a dropdown to select one manually) |
 | Preview data | Sample values from the first rows of your file |
@@ -33,11 +32,11 @@ For each field you want to import, click the **✓** (tick) button to confirm th
 Required fields (marked with **\***) must be confirmed before you can proceed. The required fields are:
 
 | Field | Description |
-|-------|-------------|
-| Company Name* | Used to identify and group sites under the same client |
-| Company Country* | The country of the client's headquarters |
-| Site Name* | The name of each site |
-| Site Country* | The country where the site is located |
+| --- | --- |
+| Company Name\* | Used to identify and group sites under the same client |
+| Company Country\* | The country of the client's headquarters |
+| Site Name\* | The name of each site |
+| Site Country\* | The country where the site is located |
 
 The remaining fields are optional — confirm any that you want to include in the import.
 
@@ -64,28 +63,28 @@ To fix errors, correct the relevant rows in your file and re-run the import. Onl
 ### Company fields
 
 | Field | Notes |
-|-------|-------|
-| Company Name* | Required |
-| Company Country* | Required |
-| Company Description | |
-| Company Account Number | |
-| Company SIC Code | |
-| Company Sector | |
+| --- | --- |
+| Company Name\* | Required |
+| Company Country\* | Required |
+| Company Description |  |
+| Company Account Number |  |
+| Company SIC Code |  |
+| Company Sector |  |
 | Company Currency | Defaults to account currency if not provided |
-| Company Post Code | |
-| Company Address Line 1 | |
-| Company Address Line 2 | |
+| Company Post Code |  |
+| Company Address Line 1 |  |
+| Company Address Line 2 |  |
 | Company GPS Coordinates | Latitude/longitude pair |
 
 ### Site fields
 
 | Field | Notes |
-|-------|-------|
-| Site Name* | Required |
-| Site Country* | Required |
-| Site Description | |
-| Site Currency | |
-| Site SIC Code | |
-| Site State / Province | |
+| --- | --- |
+| Site Name\* | Required |
+| Site Country\* | Required |
+| Site Description |  |
+| Site Currency |  |
+| Site SIC Code |  |
+| Site State / Province |  |
 | Site GPS Coordinates | Latitude/longitude pair |
-| Site Total Insured Value | |
+| Site Total Insured Value |  |
