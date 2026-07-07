@@ -1,26 +1,102 @@
 ---
 title: "Activity templates"
-description: "Guide for activity templates in the TruRisk portal."
+description: "How to browse, create, and manage activity templates in the TruRisk Activity Library."
+icon: "rectangle-list"
 ---
 
-## Overview
+The **Activity Library** is the central store for all activity templates. Templates define the instructions and steps that users complete when an activity is assigned to them via the TruRisk app.
 
-Use this page to document how to activity templates in the TruRisk portal.
+To open the Activity Library, click **Activity Library** in the sidebar.
 
-## Steps
+## Browsing templates
 
-<Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
-  </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
-  </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
-  </Step>
-</Steps>
+The list view shows all available templates with three columns: **Activity** (name and category), **Updated** (last modified date), and **Source** (Public or Private).
 
-<Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
-</Info>
+Use the **Search Activities** bar, **Updated** date filter, or **Source** filter to find specific templates.
+
+## Public and private templates
+
+Templates have one of two sources:
+
+**Public** — Templates created and maintained by TruRisk. These are read-only and cannot be edited directly. A banner on public templates reads: "This is an activity template created by TruRisk. To edit your own version you can Duplicate the Template." Duplicating creates an editable Private copy in your library.
+
+**Private** — Templates created by your organisation. These can be freely edited.
+
+## Viewing a template
+
+Click any template in the list to open its record. The record has two tabs:
+
+**Activity Overview** — Shows the template's content:
+
+- **Activity Directions** — The main instructions displayed to the user at the start of the activity.
+- **Activity Details** panel — A summary of the template's metadata:
+
+| Field | Description |
+|-------|-------------|
+| Description | Internal description (not shown to users) |
+| Completion Time | Estimated time to complete, in minutes |
+| Source | Public or Private |
+| Push Notification Title | Title of the notification sent to the assigned user |
+| Push Notification Message | Body of the push notification |
+| Sectors | Which industry sectors the template applies to |
+
+**Versions** — A history of all versions of the template, with columns for Version number, Status (Published or Archived), Created By, Created date, and Updated date. Only one version can be Published at a time; previous versions are Archived when a new version is published.
+
+## Creating a template
+
+Click **+ Add Activity** in the top-right of the Activity Library. The creation form has two tabs.
+
+### Activity Details tab
+
+| Field | Description |
+|-------|-------------|
+| Name* | The template name (required) |
+| Description | Internal description — not shown to users when completing the activity |
+| Activity Directions | Rich-text instructions displayed to the user at the start of the activity |
+| Completion Time Estimate | Expected duration in minutes |
+| Push Notification Title | Custom title for the notification sent when the activity is assigned |
+| Push Notification Message | Custom notification body (max 50 characters; letters, numbers, `?`, `,`, `.` only) |
+
+If no custom push notification is set, TruRisk sends a standard notification.
+
+### Steps tab
+
+The Steps tab defines the data collection structure of the activity. Content is organised into **sections**, each containing one or more **steps**.
+
+#### Sections
+
+Each section has a title, an optional description, and a **Section Type**:
+
+- **Questionnaire** — Collects data from the user.
+- **Quiz** — Asks a question with a predetermined correct answer, used to test the user's knowledge.
+
+Section titles and descriptions are internal — users see only the step content when completing the activity.
+
+To control when a section is shown, enable the **Hide until** toggle and select a **Trigger**. This allows you to show or hide sections based on responses provided in earlier steps (branching logic).
+
+Use the **+** button in the right sidebar to add a step to a section. Use the **+** and section buttons at the bottom to add more sections. Sections and steps can be reordered using the arrow controls.
+
+#### Steps
+
+Each step has a **Title** (required) and a **Step Type** (required), plus an optional tag and description.
+
+Available step types:
+
+| Step Type | Description |
+|-----------|-------------|
+| Text | Free-text response |
+| Number | Numeric input |
+| Single choice | One selection from a list of options |
+| Multiple choice | Multiple selections from a list of options |
+| Confirm / Complete | A checkbox-style confirmation step |
+| Media Upload | Allows the user to attach a photo or file |
+| Date | A date picker |
+
+Each step also has optional toggles:
+
+- **Other** — Adds a free-text "Other" option (for choice steps).
+- **Snoozeable** — Allows the user to snooze the step and return to it later.
+- **Reassignable** — Allows the user to reassign the step to someone else.
+- **Skippable** — Allows the user to skip the step.
+
+Click **Save Changes** to save the template. The template is saved as a new Published version.

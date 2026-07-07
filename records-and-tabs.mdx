@@ -1,26 +1,63 @@
 ---
 title: "Records and tabs"
-description: "Guide for records and tabs in the TruRisk portal."
+description: "How records and tabs work in the TruRisk Risk Engineer portal."
+icon: "rectangles-mixed"
 ---
 
-## Overview
+TruRisk organises information into **records** — individual pages for each client, site, survey, and other entities. Each record is structured with a header and a set of tabs that group related information.
 
-Use this page to document how to records and tabs in the TruRisk portal.
+## Record structure
 
-## Steps
+Every record page follows the same layout:
 
-<Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
-  </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
-  </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
-  </Step>
-</Steps>
+- **Header** — displays the record's name, key details (such as address or status), and action buttons (e.g. Edit, Schedule Activity).
+- **Tabs** — divide the record's content into logical sections. Click a tab to switch between views without leaving the record.
+- **Breadcrumb trail** — shown in the top bar, this displays the full path to the current record (e.g. Clients → Hartmann Industrial GmbH → Dortmund Main Plant) and lets you navigate back up the hierarchy.
 
-<Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
-</Info>
+## Record types
+
+### Client record
+
+The client record is the top-level record for an insured company. Its tabs are:
+
+| Tab | Contents |
+|-----|----------|
+| **Client Overview** | Score summary, recent recommendations, recent activity, and client details panel |
+| **Sites** | All sites belonging to this client |
+| **Activities** | Activities scheduled or completed for this client |
+| **Surveys** | All surveys across all sites for this client |
+| **Recommendations** | All recommendations raised across surveys for this client |
+| **Documents** | Uploaded documents associated with the client |
+| **Contacts** | Contacts associated with the client |
+| **Change Log** | Audit trail of all changes to this client record |
+| **Teams** | Teams assigned to this client |
+
+### Site record
+
+The site record represents a physical location belonging to a client. Its tabs are:
+
+| Tab | Contents |
+|-----|----------|
+| **Site Overview** | Score summary, recent recommendations, recent activity, and site details panel |
+| **Activities** | Activities scheduled or completed at this site |
+| **Surveys** | All surveys conducted at this site |
+| **Recommendations** | All recommendations raised across surveys at this site |
+| **Risk Profile** | The site's risk classification scores and TruRisk Score |
+| **Change Log** | Audit trail of all changes to this site record |
+
+### Survey record
+
+The survey record captures the detail of a single risk engineering survey visit. Its tabs are:
+
+| Tab | Contents |
+|-----|----------|
+| **Survey Overview** | Documents, updates, and the survey details panel |
+| **Recommendations** | Recommendations raised during this survey |
+| **COPE** | Construction, Occupancy, Protection, and Exposure data (Property surveys only) |
+| **Loss Estimate** | Insured values and loss scenario estimates |
+| **Risk Classification** | Risk element scores and the overall survey score |
+| **Change Log** | Audit trail of all changes to this survey record |
+
+## List views
+
+Each section in the sidebar (Clients, Surveys, Recs, etc.) opens a **list view** — a filterable, searchable table of all records of that type. From a list view you can open individual records, apply filters, and use the **···** menu for bulk actions such as importing.

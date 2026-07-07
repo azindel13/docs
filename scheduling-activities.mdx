@@ -1,26 +1,52 @@
 ---
 title: "Scheduling activities"
-description: "Guide for scheduling activities in the TruRisk portal."
+description: "How to schedule an activity for a client or site in TruRisk."
+icon: "calendar-clock"
 ---
 
-## Overview
+Activities are scheduled from a client or site record. When scheduled from a client record, you can select one or more of the client's sites as the activity location. When scheduled from a site record, the activity is scoped to that site.
 
-Use this page to document how to scheduling activities in the TruRisk portal.
-
-## Steps
+## Schedule an activity
 
 <Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
+  <Step title="Open the client or site record">
+    Navigate to the client or site you want to schedule the activity for.
   </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
+  <Step title="Click Schedule Activity">
+    Click the **Schedule Activity** button in the record header.
   </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
+  <Step title="Select a template">
+    A dialog lists all available activity templates. Use the search bar to filter by name. Click the template you want to use.
+  </Step>
+  <Step title="Configure the schedule">
+    Fill in the scheduling form and click **Schedule Activity** to confirm.
   </Step>
 </Steps>
 
+## Scheduling form
+
+### General Info
+
+| Field | Description |
+|-------|-------------|
+| Activity | The selected template (pre-filled) |
+| Schedule on | The date the activity becomes available to the assigned user |
+| Due date | The deadline for completing the activity |
+| Late Submission By | How long after the due date a late submission is still accepted (default: 1 week) |
+| Repeat | Whether the activity recurs automatically (default: Does Not Repeat) |
+
+### Assignment Type
+
+Choose who receives the activity:
+
+**Site Manager** — The activity is assigned to all site managers at the selected locations.
+
+**Company Administrator** — The activity is assigned to the client's main admin user.
+
+### Locations
+
+Select one or more of the client's sites where the activity should be completed. The activity will be assigned to the users selected above, but only at the chosen sites.
+
 <Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
+  When scheduling from a site record, the location is fixed to that site and the Locations section is not shown.
 </Info>

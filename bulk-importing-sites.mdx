@@ -1,26 +1,73 @@
 ---
 title: "Bulk importing sites"
-description: "Guide for bulk importing sites in the TruRisk portal."
+description: "How to import multiple sites at once into an existing client record."
+icon: "location-dot"
 ---
 
-## Overview
+The bulk site import lets you add multiple sites to an existing client at once by uploading a spreadsheet. All imported sites will be created under the client record you start the import from.
 
-Use this page to document how to bulk importing sites in the TruRisk portal.
-
-## Steps
-
-<Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
-  </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
-  </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
-  </Step>
-</Steps>
+To start an import, open the client record, go to the **Sites** tab, click the **···** menu, and select **Import Sites for this Client**.
 
 <Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
+  If you need to create both clients and sites at the same time, use the [bulk client import](/bulk-importing-clients) from the Clients page instead. That flow accepts one file and creates client and site records together.
 </Info>
+
+## Step 1: Upload file
+
+Drag and drop your file into the upload area, or click **Browse** to select it from your computer.
+
+Accepted formats: `.xlsx`, `.csv`
+
+The file should contain one row per site. Company-level fields are not required, since all sites will be linked to the current client.
+
+## Step 2: Map fields
+
+TruRisk automatically attempts to match your file's column headers to the corresponding site fields. The mapping screen shows three columns:
+
+| Column | Description |
+|--------|-------------|
+| TruRisk Field | The field name in TruRisk |
+| Headers | The matched column from your file (or a dropdown to select one manually) |
+| Preview data | Sample values from the first rows of your file |
+
+For each field you want to import, click the **✓** (tick) button to confirm the mapping. Only confirmed mappings are imported — any field left unconfirmed is ignored, even if it was auto-matched.
+
+Required fields (marked with **\***) must be confirmed before you can proceed:
+
+| Field | Description |
+|-------|-------------|
+| Site Name* | The name of each site |
+| Site Country* | The country where the site is located |
+
+The remaining fields are optional — confirm any that you want to include in the import.
+
+<Tip>
+  If a column in your file doesn't auto-match, use the **Header** dropdown for that field to select the correct column manually.
+</Tip>
+
+## Step 3: Preview import
+
+Review the sites that will be created before committing. This step shows a summary of the records TruRisk has parsed from your file, along with any warnings about rows that couldn't be matched or mapped.
+
+## Step 4: Review results
+
+After the import runs, a results screen shows which sites were created successfully and which (if any) failed, along with the reason for each failure.
+
+To fix errors, correct the relevant rows in your file and re-run the import. Only sites that were not successfully imported previously will be created — sites that already exist under this client are ignored, so re-importing won't create duplicates.
+
+<Info>
+  The import only **creates** new sites. It does not update existing site records. If a site with the same name already exists under this client, that row will be skipped.
+</Info>
+
+## Supported fields
+
+| Field | Notes |
+|-------|-------|
+| Site Name* | Required |
+| Site Country* | Required |
+| Site Description | |
+| Site Currency | |
+| Site SIC Code | |
+| Site State / Province | |
+| Site GPS Coordinates | Latitude/longitude pair |
+| Site Total Insured Value | |

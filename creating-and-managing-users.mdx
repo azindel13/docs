@@ -1,26 +1,65 @@
 ---
 title: "Creating and managing users"
-description: "Guide for creating and managing users in the TruRisk portal."
+description: "How to add, view, and manage Risk Engineer portal users in TruRisk."
+icon: "user-gear"
 ---
 
-## Overview
+The **Users** section lists all users in your TruRisk organisation. To open it, click **Users** in the sidebar.
 
-Use this page to document how to creating and managing users in the TruRisk portal.
+<Info>
+  Only users with the **Risk Engineer Admin** role can add users and manage roles. See [User roles and permissions](/user-roles-and-permissions).
+</Info>
 
-## Steps
+## Users list
+
+The list shows all users with the following columns: **Name**, **Username** (and email), **Role**, **Teams**, and **Last Login**. Use the **Search Users** bar, **Teams** filter, **Role** filter, or **Last Login** date filter to find specific users.
+
+## Adding a user
 
 <Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
+  <Step title="Click Add User">
+    Click **Add User** in the top-right of the Users page.
   </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
+  <Step title="Fill in user details">
+    Complete the following fields:
+
+    | Field | Description |
+    |-------|-------------|
+    | First Name* | Required |
+    | Last Name | |
+    | Email* | The user's email address — used to log in and receive notifications |
+    | Phone Number | Optional contact number |
+    | Profile photo | Optional photo or avatar |
   </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
+  <Step title="Set a role">
+    Choose one of the two available roles:
+
+    - **Risk Engineer** — Create and manage companies, surveys, and recommendations.
+    - **Risk Engineer Admin** — All Risk Engineer permissions, plus user management and account settings.
+  </Step>
+  <Step title="Assign to a team (optional)">
+    Click **Assign to team** to add the user to one or more teams at creation time. You can also do this later from the user record or from the Teams page.
+  </Step>
+  <Step title="Click Create User">
+    The user is created and will receive an invitation email to set their password.
   </Step>
 </Steps>
 
-<Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
-</Info>
+## User record
+
+Click any user in the list to open their record. The record has two tabs:
+
+**User Overview** — Shows the user's details and permissions:
+- **User Details**: First Name, Last Name, Email, Username, Contact Number
+- **User Permissions**: Role(s) assigned to the user
+
+**Teams** — Lists the teams the user is a member of.
+
+## Editing a user
+
+Click **Edit User** on the user record to update their details, role, or team memberships.
+
+When editing your own profile, you can also:
+- **Change Password** — Update your login password.
+- **Multi-factor authentication** — Enable or disable MFA on your account.
+- **Notification Settings** — Toggle email notifications on or off.

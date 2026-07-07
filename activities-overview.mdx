@@ -1,26 +1,39 @@
 ---
 title: "Activities overview"
-description: "Guide for activities overview in the TruRisk portal."
+description: "An introduction to activities in TruRisk — what they are, how they work, and how to get started."
+icon: "circle-check"
 ---
 
-## Overview
+Activities are tasks that you schedule and assign to client-side users (site managers or company administrators) for completion via the TruRisk mobile app. They are used to capture regular inspections, checklists, and operational records at a client's sites.
 
-Use this page to document how to activities overview in the TruRisk portal.
+## How activities work
 
-## Steps
+Every activity is based on a **template** from the Activity Library. A template defines the task's instructions, questions, and data collection steps. When you schedule an activity, TruRisk creates an instance of that template and assigns it to the relevant user(s) at the specified site(s).
 
-<Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
-  </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
-  </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
-  </Step>
-</Steps>
+The assigned user receives a push notification and completes the activity through the TruRisk app. Their responses are recorded and made available in the portal under the client or site's **Activities** tab.
 
-<Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
-</Info>
+## Key concepts
+
+**Activity Library** — A centralised store of activity templates. Templates are either Public (provided by TruRisk, read-only) or Private (created by your organisation). Public templates can be duplicated to create an editable private copy. See [Activity templates](/activity-templates).
+
+**Templates and versions** — Each template maintains a version history. When you update a template, a new version is published. Previous versions are archived but remain visible in the Versions tab.
+
+**Sections and steps** — Templates are structured as one or more sections, each containing steps. Steps define what the user does or provides — a text response, a numeric value, a choice from a list, a date, a file upload, or a confirmation. Sections can be Questionnaire or Quiz type, and can be shown or hidden based on responses to earlier steps (branching logic).
+
+**Scheduling** — Activities are scheduled from a client or site record using the **Schedule Activity** button. You choose a template, set a schedule date and due date, select the assignment type, and choose which sites are in scope. Recurring activities can be configured to repeat automatically. See [Scheduling activities](/scheduling-activities).
+
+**Statuses** — Once scheduled, activities move through the following statuses:
+
+| Status | Meaning |
+|--------|---------|
+| **Available** | Assigned and waiting to be started |
+| **Overdue** | Past the due date, not yet completed |
+| **Done** | Completed by the assigned user |
+| **Pending approval** | Completed and awaiting review |
+| **Missed** | Not completed before the late submission deadline |
+
+## Workflow summary
+
+1. **Create or find a template** — Browse the Activity Library for an existing template, or create a new private one.
+2. **Schedule the activity** — From a client or site record, click **Schedule Activity**, select the template, and configure the schedule.
+3. **Track completion** — Monitor activity status and completion rates from the **Activities** tab on the client or site record.
