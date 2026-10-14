@@ -3,14 +3,17 @@ title: "The site record"
 description: "An overview of the site record in TruRisk, including tabs, site details, and key fields."
 ---
 
-The site record holds everything related to a specific property — its details, surveys, recommendations, activities, and risk profile. You land here after creating a site or clicking one from the client's Sites tab.
+The site record holds everything related to a specific property — its details, surveys, recommendations, activities, documents, and contacts. You land here after creating a site or clicking one from the client's Sites tab.
 
 ## Header
 
-The top of the record shows the site name and its parent client ("at [Client Name]"). Two actions are always available:
+The top of the record shows the site name and its parent client ("at [Client Name]"). The following actions are available:
 
 - **Edit Site** — update site details, address, or summary
-- **Schedule Activity** — create a new activity for this site
+- **Schedule Activity** — create a new activity for this site. Only enabled once the client has at least one user in their Client Portal.
+- **`···`** menu:
+  - **Export Recommendations** — export the site's recommendations. See [Exporting recommendations](/recommendations#exporting-recommendations).
+  - **Delete** — delete the site
 
 ## Tabs
 
@@ -39,9 +42,6 @@ The top of the record shows the site name and its parent client ("at [Client Nam
   <Accordion title="Change Log">
     A full audit trail of all changes made to this site record.
   </Accordion>
-  <Accordion title="Risk Profile">
-    The site's risk profile, populated from completed surveys. See [Risk classifications and scoring](/risk-classifications-and-scoring) for more detail.
-  </Accordion>
 </AccordionGroup>
 
 ## Site details panel
@@ -55,8 +55,8 @@ The left panel on Site Overview surfaces key information at a glance.
 | ISO Class | The site's construction classification (see below) |
 | SIC Code | Standard Industrial Classification code |
 | Date of Last Visit | Date of the most recent survey visit |
-| Date of Next Visit | Date of the next scheduled survey |
-| Total Insured Value | The site's total insured value |
+| Date of Next Visit | Date of the next scheduled survey (set automatically) |
+| Total Insured Value | The site's total insured value, taken from the Loss Estimate tab of the site's latest survey |
 
 ### ISO classes
 
@@ -73,6 +73,6 @@ The left panel on Site Overview surfaces key information at a glance.
 ## Right panel
 
 The right panel shows:
-- **TruRisk Score** — the site's current risk index, calculated from completed surveys
+- **Site Score** — the site's current risk index, calculated from completed surveys
 - **Recommendations** — a summary of open recommendations for this site
 - **Site Contacts** — contacts associated with this site

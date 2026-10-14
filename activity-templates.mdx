@@ -10,17 +10,42 @@ To open the Activity Library, click **Activity Library** in the sidebar.
 
 ## Browsing templates
 
-The list view shows all available templates with three columns: **Activity** (name and category), **Updated** (last modified date), and **Source** (Public or Private).
+The list view shows all templates in your library with the following columns:
 
-Use the **Search Activities** bar, **Updated** date filter, or **Source** filter to find specific templates.
+| Column | Description |
+|--------|-------------|
+| Activity | The template name |
+| Updated | When the template was last modified |
+| Scheduling Type | Who schedules the template — see [Scheduling modes](#scheduling-modes) |
+| Available For | Which clients the template is available to |
 
-## Public and private templates
+Use the **Search Activities** bar and the **Updated** and **Scheduling Type** filters to find specific templates.
 
-Templates have one of two sources:
+## Scheduling modes
 
-**Public** — Templates created and maintained by TruRisk. These are read-only and cannot be edited directly. A banner on public templates reads: "This is an activity template created by TruRisk. To edit your own version you can Duplicate the Template." Duplicating creates an editable Private copy in your library.
+Every template has a scheduling mode that controls **who can see and schedule it**.
 
-**Private** — Templates created by your organisation. These can be freely edited.
+| Scheduling mode | Description |
+|-----------------|-------------|
+| **Engineer Scheduling** | Only engineers in your account can see the template and schedule it for their clients. Clients don't see it in their activity library. |
+| **Client Scheduling** | The template appears in your clients' activity library, so clients can schedule it themselves. You choose which clients can see it (see below). |
+| **Public Activity** | A template created and maintained by TruRisk, available to all current and future clients. |
+
+### Choosing which clients see a template
+
+For **Client Scheduling** templates, use **Activity Available For** to choose which clients see the template in their activity library:
+
+| Option | Who sees the template |
+|--------|-----------------------|
+| **All current and future clients** | Every client in your account, including clients added later |
+| **Clients in selected sectors** | Only clients in the sectors you choose. Turn on the toggle next to each sector — use **Filter Search** to find sectors quickly. |
+| **Specific Clients** | Only the clients you choose individually. Turn on the toggle next to each client — use **Filter Search** to find clients quickly. |
+
+The panel below the field shows how many sectors or clients are currently selected.
+
+### TruRisk public templates
+
+Public templates are read-only and can't be edited directly. A banner on public templates reads: *"This is an activity template created by TruRisk. To edit your own version you can Duplicate the Template."* Click **Duplicate the Template** to create an editable copy in your library.
 
 ## Viewing a template
 
@@ -35,10 +60,11 @@ Click any template in the list to open its record. The record has two tabs:
 |-------|-------------|
 | Description | Internal description (not shown to users) |
 | Completion Time | Estimated time to complete, in minutes |
-| Source | Public or Private |
+| Scheduling Mode | Engineer Scheduling, Client Scheduling, or Public Activity |
+| Available For | Which clients the template is available to |
+| Clients / Sectors | The specific clients or sectors selected, if applicable |
 | Push Notification Title | Title of the notification sent to the assigned user |
 | Push Notification Message | Body of the push notification |
-| Sectors | Which industry sectors the template applies to |
 
 **Versions** — A history of all versions of the template, with columns for Version number, Status (Published or Archived), Created By, Created date, and Updated date. Only one version can be Published at a time; previous versions are Archived when a new version is published.
 
@@ -52,6 +78,8 @@ Click **+ Add Activity** in the top-right of the Activity Library. The creation 
 |-------|-------------|
 | Name* | The template name (required) |
 | Description | Internal description — not shown to users when completing the activity |
+| Scheduling Mode | **Engineer Scheduling** or **Client Scheduling** — see [Scheduling modes](#scheduling-modes) |
+| Activity Available For | For Client Scheduling templates only: **All current and future clients**, **Clients in selected sectors**, or **Specific Clients** |
 | Activity Directions | Rich-text instructions displayed to the user at the start of the activity |
 | Completion Time Estimate | Expected duration in minutes |
 | Push Notification Title | Custom title for the notification sent when the activity is assigned |

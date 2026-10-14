@@ -1,26 +1,122 @@
 ---
 title: "FAQs"
-description: "Guide for faqs in the TruRisk portal."
+description: "Answers to common questions about using the TruRisk Risk Engineer portal."
+icon: "circle-question"
 ---
 
-## Overview
+## Surveys
 
-Use this page to document how to faqs in the TruRisk portal.
+<AccordionGroup>
+  <Accordion title="Why can't I create a new survey for a site?">
+    A site can only have one open survey at a time. If the site already has a survey with any status other than **Report issued**, you can't start a new one — either from scratch or by copying.
 
-## Steps
+    To start a new survey, either issue the report on the open survey, or delete the open survey if you won't be using it. See [Creating survey records](/creating-survey-records).
+  </Accordion>
+  <Accordion title="I've surveyed this site before. Do I have to start from scratch?">
+    No. Use **Copy Survey** from the **`···`** menu of the previous survey. The new survey is pre-filled with all of the previous survey's data, except for recommendations — only **open** recommendations are carried across. You then just update what's changed since the last visit. See [Copying a survey](/creating-survey-records#copying-a-survey).
+  </Accordion>
+  <Accordion title="What happens to the recommendations from the previous survey when I copy it?">
+    Open recommendations aren't duplicated — the same recommendation is linked to both the previous survey and the new one, so you keep its full history. Recommendations that were completed or closed stay with the survey they were closed in.
+  </Accordion>
+  <Accordion title="When can my client see the survey report?">
+    Documents on a survey become visible in the Client Portal once **both** of these are true:
 
-<Steps>
-  <Step title="Open the relevant page">
-    Navigate to the relevant section in the portal.
-  </Step>
-  <Step title="Complete the action">
-    Follow your team workflow and save your changes.
-  </Step>
-  <Step title="Verify results">
-    Confirm the record or status updates as expected.
-  </Step>
-</Steps>
+    - The survey's status is **Report issued**.
+    - The client has access to the Client Portal — which happens once you've promoted one of their contacts to client admin.
 
-<Info>
-  Replace this starter content with your final process, screenshots, and role-specific notes.
-</Info>
+    At that point, everything in the survey's **Documents** table is visible to the client, so only upload the final report and anything else you want to share. See [Issuing a survey report](/issuing-a-survey-report).
+  </Accordion>
+  <Accordion title="Is the client told when I issue a report?">
+    Yes. When you set a survey's status to **Report issued**, the client admin is notified by email.
+  </Accordion>
+  <Accordion title="Can I edit a survey after the report has been issued?">
+    No. Issued surveys are locked. If changes are needed, ask an Admin to change the survey's status — the survey can then be edited. Changing the status doesn't send any notifications to the client.
+  </Accordion>
+  <Accordion title="What's the difference between the Survey Report and the Closeout Report?">
+    The **Survey Report** is the full survey, exported using the Property or Energy template depending on the survey type. The **Closeout Report** is a shorter report with only the Executive Summary, Positives, Observations, and Recommendations, and uses a single template for all survey types. Both download as Word documents. See [Exporting survey reports](/exporting-survey-reports).
+  </Accordion>
+  <Accordion title="Can I change a survey's type after creating it?">
+    No. The survey type can't be changed after the survey is saved, so make sure you select **Property** or **Energy** correctly when you create it.
+  </Accordion>
+  <Accordion title="Should I raise something as an observation or a recommendation?">
+    **Observations** are short, simple notes on areas of concern for the site to keep an eye on. They aren't prioritised or tracked. **Recommendations** are formal improvement actions that the business must take — they're prioritised (P1–P3) and reviewed regularly through to completion. See [Observations vs recommendations](/survey-details#observations-vs-recommendations).
+  </Accordion>
+</AccordionGroup>
+
+## Working offline
+
+<AccordionGroup>
+  <Accordion title="Can I use TruRisk on site without an internet connection?">
+    Yes — but only for surveys you've made available offline **before** you lose your connection. Any changes you make offline are saved on your device and sync automatically when you're back online. See [Working offline](/offline-surveys).
+
+    <Warning>
+      If you expect to be without a connection during an upcoming site visit, make the survey available offline **before you leave**. You can't download a survey once you're already offline.
+    </Warning>
+  </Accordion>
+  <Accordion title="What if my offline changes don't sync?">
+    The Offline Sync icon in the top bar shows a red dot. Open it to see which changes failed. For each one you can retry the sync, edit the change directly (your content is filled in automatically), or copy it as JSON and email it to the helpdesk so nothing is lost. See [Fixing sync errors](/offline-surveys#fixing-sync-errors).
+  </Accordion>
+</AccordionGroup>
+
+## Clients and the Client Portal
+
+<AccordionGroup>
+  <Accordion title="How do I give my client access to the Client Portal?">
+    1. Complete and issue the client's first survey.
+    2. Add the client's main contact on the **Contacts** tab.
+    3. Use **Promote Contact** to make them the client admin and click **Enable Access**.
+
+    The client is activated automatically and the contact is emailed an invitation. You only need to set a client's status to **Active** manually if their access was previously **Disabled** and you want to restore it. See [Contacts and Client Portal access](/contacts-and-client-portal-access).
+  </Accordion>
+  <Accordion title="What's the difference between a contact and a user?">
+    **Contacts** don't have a login. They're a list of people at the client for your reference, and they receive emails about recommendations they're assigned to. **Users** can log in. Promoting a contact turns them into the client admin user — you can only do this once per client. After that, the client admin manages their own users in the Client Portal. If the client admin loses access or has problems, contact your TruRisk administrator.
+  </Accordion>
+  <Accordion title="How can I check what my client will see?">
+    Use **Preview** from the **`···`** menu on the client record or the Clients list. It opens a read-only view of the client's portal exactly as they'll see it. See [Previewing the client portal](/previewing-the-client-portal).
+  </Accordion>
+  <Accordion title="Will my client see the documents on their client record?">
+    No. Documents on the client's **Documents** tab are for internal use only. Documents are only shared with the client when they're uploaded to a **survey** whose status is **Report issued**.
+  </Accordion>
+  <Accordion title="Why is the Schedule Activity button greyed out?">
+    Activities are completed by client users in the Client Portal, so you can only schedule them once the client has at least one user. Promote a contact to client admin to create the first user — you can then schedule activities for the client admin.
+
+    To schedule activities for site managers at individual sites, the client admin first needs to add site manager users in their Client Portal.
+  </Accordion>
+  <Accordion title="Why can't I find a client a colleague is working on?">
+    You can only see clients that belong to your team(s). Ask an admin to add you to the relevant team. See [Team management](/team-management).
+  </Accordion>
+  <Accordion title="What can an Admin do that I can't?">
+    Admins can create and manage users, create teams and assign users to them, assign surveys to users outside their own teams, change a client's status, and unlock issued surveys. See [User roles and permissions](/user-roles-and-permissions).
+  </Accordion>
+  <Accordion title="Can I recover something I deleted?">
+    Treat every deletion as permanent. TruRisk always asks you to confirm before deleting, and warns that the action can't be undone. In some cases the TruRisk team may be able to help, but recovery isn't always possible — so double-check before you confirm.
+  </Accordion>
+</AccordionGroup>
+
+## Recommendations
+
+<AccordionGroup>
+  <Accordion title="Who is notified when I post a response on a recommendation?">
+    The client contact assigned to the recommendation receives an email. If no contact is assigned, no one at the client is notified — so assign a contact to every recommendation you share. See [The recommendation record](/the-recommendation-record#responses).
+  </Accordion>
+  <Accordion title="Why is a recommendation marked as overdue?">
+    Its due date has passed and it's still open. Declined, Withdrawn, and Superseded recommendations are never overdue. Use the **Overdue** toggle on any recommendations table to see them all. See [Overdue recommendations](/recommendations#overdue-recommendations).
+  </Accordion>
+</AccordionGroup>
+
+## Scores and currency
+
+<AccordionGroup>
+  <Accordion title="Where do the TIV figures on client and site records come from?">
+    A site's Total Insured Value comes from the **Loss Estimate** tab of its latest survey. The client's TIV is the total across all of its sites. See [Insured values and loss estimates](/insured-values-and-loss-estimates).
+  </Accordion>
+  <Accordion title="How is the Next Survey date set?">
+    Automatically — you don't need to enter it.
+  </Accordion>
+  <Accordion title="How is a client's score calculated?">
+    Each site's score comes from the **Risk Classification** scoresheet of its most recent survey. The client's score is the average of its sites' scores, weighted by each site's Total Insured Value — so higher-value sites have more influence. See [How scores roll up](/risk-classifications-and-scoring#how-scores-roll-up).
+  </Accordion>
+  <Accordion title="Why are values showing in a different currency?">
+    Values are shown either in your **preferred currency** or in each **client's local currency** (set on the client record, usually based on locale). Use the currency button at the top of the screen to switch between them. Conversion is for display only — the original values are never changed. See [Currency preference](/currency).
+  </Accordion>
+</AccordionGroup>

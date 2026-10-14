@@ -1,65 +1,108 @@
 ---
 title: "Insured values and loss estimates"
-description: "How to record loss estimates and insured values in a TruRisk survey."
+description: "How to record total insured values and loss scenarios in a TruRisk survey."
 icon: "money-check-dollar-pen"
 ---
 
-The **Loss Estimate** tab on a survey record captures the financial exposure associated with the site — both the estimated loss under different scenarios and the total insured values across asset categories.
+The **Loss Estimate** tab on a survey record captures the financial exposure of the site. It has two parts:
 
-To add loss estimate data, open the survey record, go to the **Loss Estimate** tab, and click **Add Loss Estimate**.
+- **Total Insured Value** — the insured values for the site, broken down by asset category
+- **Loss Scenarios** — the estimated loss under three scenarios, calculated from the insured values
 
-## Loss estimates
-
-Three standard loss scenarios are captured for each survey. Each scenario records a **Property** value and a **Business Interruption** value, with a calculated total.
-
-### Anticipated Probable Loss (APL)
-
-The loss expected under normal conditions, assuming protection systems perform as intended.
-
-| Field | Description |
-|-------|-------------|
-| Property | Anticipated property damage |
-| Business Interruption | Anticipated BI loss |
-| Total APL | Auto-calculated sum |
-
-### Probable Maximum Loss (PML)
-
-The loss expected under a severe but credible scenario, assuming some protection systems fail or are impaired.
-
-| Field | Description |
-|-------|-------------|
-| Property | PML property damage |
-| Business Interruption | PML business interruption loss |
-| Total PML | Auto-calculated sum |
-
-A **Probable Maximum Loss Narrative** field is available to document the assumptions behind the PML estimate.
-
-### Maximum Foreseeable Loss (MFL)
-
-The loss expected under the worst credible scenario, assuming all protection systems fail.
-
-| Field | Description |
-|-------|-------------|
-| Property | MFL property damage |
-| Business Interruption | MFL business interruption loss |
-| Total MFL | Auto-calculated sum |
+To get started, open the survey record and go to the **Loss Estimate** tab. All fields can be edited directly on the tab, and totals update automatically as you type.
 
 ## Total insured value (TIV)
 
-The TIV section captures the insured value of the site broken down by asset category.
+Enter the insured value for each asset category:
 
 | Category | Description |
 |----------|-------------|
 | Building | Insured value of the building structure |
+| Stock | Insured value of raw materials, work in progress, and finished goods |
 | Machinery & Equipment | Insured value of plant and equipment |
-| Stock | Insured value of raw materials, WIP, and finished goods |
-| Business Interruption (12 months) | Annual BI coverage limit |
+| Business interruption (12 months) | Annual business interruption value |
 | Other | Any other insured values |
 
-## Loss estimate narrative
+### TIV calculations
 
-A free-text field for documenting methodology, assumptions, or commentary on the loss estimates.
+The **TIV Calculations** panel beside the inputs works out the combined values for you:
+
+| Value | Calculation |
+|-------|-------------|
+| Content | Stock + Machinery & Equipment |
+| Property | Building + Content |
+| Total insured value | Property + Business interruption + Other |
 
 <Info>
-  Currency is inherited from the client record. TIV values feed into the **Total Insured Value** shown in the Survey Details panel and the **Estimated Loss** summary on the Recommendations tab.
+  The total insured value is shown as **Total Insured Value** in the Survey Info panel on the survey record. The TIV from a site's **latest** survey is also used as the site's TIV, and feeds the client's TIV and the TIV-weighted Client Score.
+</Info>
+
+## Loss scenarios
+
+Three standard loss scenarios are calculated for each survey, each using the values from the Total Insured Value section above.
+
+| Scenario | Description |
+|----------|-------------|
+| **Normal Loss Expectancy (NLE)** | The loss expected under normal conditions, with protection systems performing as intended |
+| **Probable Maximum Loss (PML)** | The loss expected under a severe but credible scenario, where some protection systems fail or are impaired |
+| **Estimated Maximum Loss (EML)** | The loss expected under the worst credible scenario, where protection systems fail |
+
+Each scenario appears as a card showing its **Property damage**, **Business interruption**, and **Total** loss, along with the total as a percentage of TIV. Click a card to expand it and enter the damage assumptions.
+
+### Entering damage percentages
+
+When a scenario is expanded, each insured category is listed with its sum insured value. For the following rows, set the percentage of the value you expect to be lost in that scenario:
+
+- Building
+- Stock
+- Machinery & Equipment
+- Business interruption (12 months)
+
+You can set the percentage in either of two ways:
+
+- **Type it** into the % box — any whole number from 0 to 100
+- **Click the damage bar** — the bar has 10 segments, each representing 10%. Clicking a segment sets the percentage to that multiple of 10.
+
+If you type a value that isn't a multiple of 10, the bar rounds to the nearest 10% for display (for example, 34% fills three segments and 35% fills four). The exact value you typed is always used to calculate the damage value.
+
+The **Damage value** for each row is calculated automatically as the sum insured multiplied by the damage percentage.
+
+<Tip>
+  Each scenario has its own set of percentages, so you can set different damage assumptions for NLE, PML, and EML.
+</Tip>
+
+### Calculated rows
+
+The remaining rows in each scenario are calculated for you:
+
+| Row | Calculation |
+|-----|-------------|
+| Content | Stock damage + Machinery & Equipment damage, shown with its effective damage percentage |
+| Property damage | Building damage + Content damage, shown with its effective damage percentage |
+| Total (NLE / PML / EML) | Property damage + Business interruption damage, shown as a percentage of TIV |
+
+## Narratives
+
+There are two types of narrative on the Loss Estimate tab:
+
+- **Loss estimate narrative** — a general free-text narrative for documenting your overall methodology, assumptions, or commentary on the loss estimates
+- **Scenario narratives** — one for each loss scenario (NLE, PML, and EML), so you can explain the assumptions behind that specific estimate right next to the percentages it justifies
+
+### Adding the loss estimate narrative
+
+1. Below the loss scenarios, click **Add general loss estimate narrative**.
+2. Write your narrative in the text editor, then close the editor to save it.
+
+Once a narrative has been written, it's shown in its own section below the loss scenarios.
+
+### Adding a scenario narrative
+
+1. Expand the scenario.
+2. Below the damage table, click **Add [scenario] narrative** (for example, **Add normal loss expectancy narrative**).
+3. Write your narrative in the text editor, then close the editor to save it.
+
+Once saved, the section shows the start of your narrative with an **Edit narrative** button so you can update it later.
+
+<Info>
+  Values are entered in the site's currency, which is inherited from the client record by default. They're displayed in your [preferred currency](/currency).
 </Info>

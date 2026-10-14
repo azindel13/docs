@@ -1,0 +1,101 @@
+---
+title: "Working offline"
+description: "Download surveys for offline use, keep working without a connection, and sync your changes when you're back online."
+icon: "cloud-arrow-down"
+---
+
+Site visits don't always come with a reliable internet connection. TruRisk lets you download surveys to your device so you can keep working on them offline. Any changes you make are saved to a sync queue and uploaded automatically the next time you're online.
+
+<Info>
+  You can only work on surveys that you made available offline **before** you lost your connection. Make sure every survey you need for a site visit is downloaded in advance.
+</Info>
+
+## Making a survey available offline
+
+You can make a survey available offline from either of two places:
+
+- **The Surveys list** — click the **`···`** menu at the end of the survey's row and select **Make available Offline**.
+- **The survey record** — click the **`···`** menu in the header (next to **Edit Survey**) and select **Make available Offline**.
+
+A confirmation message appears: *"[Survey name] is now available for offline use"*.
+
+Surveys that are available offline show a **cloud icon** next to the survey name in the Surveys list and in the survey record header.
+
+### Removing a survey from offline mode
+
+To remove a single survey from your device, open the **`···`** menu for the survey (from the Surveys list or the survey record header) and select **Remove from offline mode**.
+
+To remove every offline survey at once, use **Remove all surveys** in the [Offline Sync panel](#the-offline-sync-panel).
+
+## Working offline
+
+When TruRisk detects that you've lost your connection, a message appears: *"You're offline – reload the page to enter offline mode."* Click **Reload** to switch to offline mode.
+
+In offline mode:
+
+- A **red dot** appears on **Surveys** in the sidebar to show you're offline.
+- The **Surveys** list shows only the surveys you made available offline.
+- You can open and edit those surveys as normal, and you can **delete** an offline survey from its **`···`** menu.
+
+Some features need a connection and aren't available while you're offline, including:
+
+- Searching and filtering the Surveys list
+- **Export** and **Edit Survey** in the survey record header
+- The **Change Log** tab
+
+### Pending changes
+
+Every change you make offline is saved on your device and added to the sync queue. Until it syncs:
+
+- The edited section of the survey shows a **Pending Sync** badge.
+- The Offline Sync icon in the top bar shows an amber badge with the number of pending changes.
+
+Deletions are queued in the same way, and are applied when you're next online.
+
+## Syncing your changes
+
+You don't need to do anything to sync. When your connection returns, TruRisk uploads your queued changes automatically. When the sync completes, a message confirms *"Your offline changes have synced"*, and the Pending Sync badges are cleared.
+
+## The Offline Sync panel
+
+The **Offline Sync** icon (a cloud) sits in the top bar, next to Search. A coloured dot on the icon shows the current sync status:
+
+| Dot | Meaning |
+|-----|---------|
+| Green | All changes are synced |
+| Amber | Changes are waiting to sync — the number shows how many |
+| Red | One or more changes failed to sync — see [Fixing sync errors](#fixing-sync-errors) |
+
+Click the icon to open the panel. It has two sections.
+
+### Available offline
+
+- A **storage** bar showing how much space your offline surveys are using on your device, and how much is available.
+- A list of the surveys available offline, with the client and site for each.
+- **Remove all surveys** — removes every survey from offline mode in one step.
+
+### Offline sync queue
+
+The queue lists changes that haven't synced yet, grouped by survey. Each survey shows how many changes are pending — expand it to see the individual changes (for example, *Update Acknowledgement*).
+
+**Clear queue** discards all of the changes waiting to sync.
+
+<Warning>
+  Clearing the queue **permanently deletes** any changes that haven't synced yet. They can't be recovered. You'll be asked to confirm before the queue is cleared.
+</Warning>
+
+## Fixing sync errors
+
+If a change fails to sync, the dot on the Offline Sync icon turns red. Open the Offline Sync panel to see which changes failed. For each failed change, you have three options:
+
+<AccordionGroup>
+  <Accordion title="Retry the sync">
+    Attempts to sync the change again. Try this first — many failures are caused by a temporary connection problem.
+  </Accordion>
+  <Accordion title="Edit directly">
+    Opens the change in an edit window so you can make it again online. The content you entered offline is filled in automatically from your device, so you don't need to retype it.
+  </Accordion>
+  <Accordion title="Copy as JSON">
+    Copies the change as JSON. If a complex change won't sync, email the JSON to the helpdesk so the team can apply it for you and none of your work is lost. See [Contact us](/contact-us).
+  </Accordion>
+</AccordionGroup>

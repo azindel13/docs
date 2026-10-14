@@ -42,7 +42,8 @@ The site record represents a physical location belonging to a client. Its tabs a
 | **Activities** | Activities scheduled or completed at this site |
 | **Surveys** | All surveys conducted at this site |
 | **Recommendations** | All recommendations raised across surveys at this site |
-| **Risk Profile** | The site's risk classification scores and TruRisk Score |
+| **Documents** | Uploaded documents associated with the site |
+| **Contacts** | Contacts associated with the site |
 | **Change Log** | Audit trail of all changes to this site record |
 
 ### Survey record
@@ -52,6 +53,7 @@ The survey record captures the detail of a single risk engineering survey visit.
 | Tab | Contents |
 |-----|----------|
 | **Survey Overview** | Documents, updates, and the survey details panel |
+| **Survey Details** | Acknowledgement, Executive Summary, Positives, Observations, Loss History, Major Updates, Utilities, and Business Interruption |
 | **Recommendations** | Recommendations raised during this survey |
 | **COPE** | Construction, Occupancy, Protection, and Exposure data (Property surveys only) |
 | **Loss Estimate** | Insured values and loss scenario estimates |
@@ -61,3 +63,24 @@ The survey record captures the detail of a single risk engineering survey visit.
 ## List views
 
 Each section in the sidebar (Clients, Surveys, Recs, etc.) opens a **list view** — a filterable, searchable table of all records of that type. From a list view you can open individual records, apply filters, and use the **···** menu for bulk actions such as importing.
+
+Click a column heading to sort the table by that column.
+
+### Search and filters by list
+
+| List | Search and filters |
+|------|--------------------|
+| **Clients** | Search by name, then filter by **Sector**, **Last Visit**, **Renewal** date, or **Risk Classification** |
+| **Surveys** | Search by name, then filter by **Client**, **Status**, **Visit Date**, **Updated** date, or **Assigned Engineer** |
+| **Recs** | Search by keyword, then filter by Year, Country, Risk Level, Survey Type, Classification, Priority, Client, Status, or Overdue. See [Filtering recommendations](/recommendations#filtering-recommendations). |
+| **Activity Library** | Search by name, then filter by **Updated** date or **Scheduling Type** |
+| **Change Log** | Search the log, then use **Choose Dates** to show changes from a date range |
+| **Teams** | Search by name, or turn on **My Teams** to show only teams you belong to |
+| **Users** | Search by name, then filter by **Teams**, **Role**, or **Last Login** |
+
+### Actions in list views
+
+- The **`···`** menu at the end of each row gives quick access to actions for that record. Deleting a record always asks you to confirm first — treat deletions as permanent, as they can't be undone. For example, on the Clients list you can **Edit**, **Preview**, or **Delete** a client.
+- The **`···`** menu at the top of some lists holds actions for the whole list — for example, **Import Clients** on the Clients list.
+- On the Clients list, you can change a client's status directly from the **Status** column (admin users only).
+

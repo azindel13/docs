@@ -10,9 +10,12 @@ The client record is the central hub for everything related to a client — thei
 The top of the record shows the client's name and primary address. Two actions are always available here:
 
 - **Edit Client** — update client details, address, or policy information
-- **Schedule Activity** — create a new activity for this client
+- **Schedule Activity** — create a new activity for this client. This button is only enabled once the client has at least one user in their Client Portal, since activities are completed by client users. Promoting a contact to client admin creates the first user.
 
-The **`···`** menu contains additional options including archiving or deleting the client.
+The **`···`** menu contains additional options:
+
+- **Preview** — see the client's portal exactly as they will. See [Previewing the client portal](/previewing-the-client-portal).
+- **Delete** — delete the client.
 
 ## Status
 
@@ -20,9 +23,21 @@ Each client has a status that controls whether they can access their TruRisk Cli
 
 | Status | Meaning |
 |--------|---------|
-| **Pending** | Default on creation. Engineers are building out the client's risk profile. The client cannot access the portal yet. |
-| **Active** | The engineer is ready to share reports. The client gains access to their portal. |
-| **Disabled** | The client is no longer active. Portal access is removed. |
+| **Pending** | Default for new clients. The Client Portal is off while engineers build out the client's risk profile — typically until the first survey is completed and the report is issued. |
+| **Active** | The client has access to their Client Portal. |
+| **Disabled** | Portal access is removed for an existing client. |
+
+### Activating a client
+
+You don't set a new client to Active manually. A client becomes **Active** automatically when you promote one of their contacts to client admin — see [Contacts and Client Portal access](/contacts-and-client-portal-access). A client can't be activated until this has been done.
+
+<Tip>
+  Before you promote a contact, use **Preview** in the **`···`** menu to check exactly what the client will see. See [Previewing the client portal](/previewing-the-client-portal).
+</Tip>
+
+### Disabling and reactivating a client
+
+To remove portal access from an existing client, use the **Status** dropdown in the **Client Info** panel to set them to **Disabled**. To restore access later, set the status back to **Active**.
 
 <Info>
   Status can only be changed by admin users.
@@ -35,17 +50,19 @@ The client record is organised into tabs. Each tab groups related information.
 <AccordionGroup>
   <Accordion title="Client Overview">
     The default view when you open a client record. Shows:
-    - **TruRisk Score** — the client's current risk index, calculated from completed surveys
+    - **Client Score** — the client's current risk index, calculated from completed surveys
     - **Recommendations** — a summary of open recommendations
     - **Recent Updates** — recent activity on this record
-    - **Upcoming Events** — scheduled activities
-    - **Client Summary** — a free-text area for notes and context about the client
+    - **Upcoming** — recommendations that are coming due, with their due dates
+    - **Company Summary** — a free-text area for notes and context about the client
   </Accordion>
   <Accordion title="Sites">
-    Lists all sites associated with this client. From here you can add new sites or open an existing site record. See [Creating sites](/creating-sites) and [The site record](/the-site-record) for more detail.
+    Lists all sites associated with this client, with each site's **Last Survey** date, number of **Open Recommendations**, **TIV**, and **Classification**. Click **Add Site** to create a new site, or click a site to open its record.
+
+    A **Site Occupancy Breakdown** chart at the top of the tab groups the client's sites by occupancy, based on each site's **SIC Code**. See [Creating sites](/creating-sites) and [The site record](/the-site-record) for more detail.
   </Accordion>
   <Accordion title="Activities">
-    Shows all activities logged or scheduled for this client across all sites. See [Activities overview](/activities-overview) and [Scheduling activities](/scheduling-activities) for more detail.
+    Shows all activities logged or scheduled for this client across all sites, with summary cards for completion and overdue activities. See [Activity records](/activity-records). See [Activities overview](/activities-overview) and [Scheduling activities](/scheduling-activities) for more detail.
   </Accordion>
   <Accordion title="Surveys">
     Lists all surveys created for this client. You can create a new survey or open an existing one from here. See [Creating survey records](/creating-survey-records) and [Survey statuses](/overview-of-surveys-and-statuses) for more detail.
@@ -54,16 +71,16 @@ The client record is organised into tabs. Each tab groups related information.
     All recommendations raised across this client's surveys, with their current status. See [Recommendations](/recommendations) for more detail.
   </Accordion>
   <Accordion title="Documents">
-    Files attached to this client record.
+    Internal files attached to this client, such as plans and supporting documents. Documents on the client's Documents tab are **not** visible to the client in their portal — to share a report, upload it to the survey instead (see [Issuing a survey report](/issuing-a-survey-report)). Click **Add Document** to upload a file. The table shows each document's **Title**, **Site**, **Updated** date, and **Author**, and can be filtered by **Site**, **Updated** date, and **Owner**.
   </Accordion>
   <Accordion title="Contacts">
-    Contact people associated with this client.
+    The people at the client you work with. Click **Add Contact** to add one. Each contact has a **Job Title**, **Email**, **Phone Number**, and the **Site(s)** they're associated with. Contacts can be assigned to recommendations so they're notified of updates, and a contact can be promoted to client admin to give the client access to the Client Portal — see [Contacts and Client Portal access](/contacts-and-client-portal-access).
   </Accordion>
   <Accordion title="Change Log">
     A full audit trail of changes made to this client record.
   </Accordion>
   <Accordion title="Teams">
-    The internal teams assigned to manage this client. See [Team management](/team-management) for more detail.
+    The internal teams assigned to manage this client. Click **Assign Team(s)** to add a team to the client. Users can only see and edit clients that belong to their team(s). See [Team management](/team-management). See [Team management](/team-management) for more detail.
   </Accordion>
 </AccordionGroup>
 
@@ -79,9 +96,9 @@ The right-hand panel surfaces key information at a glance.
 | Account Number | Your internal reference number |
 | SIC | Standard Industrial Classification code |
 | Sector | Industry sector |
-| TIV | Total Insured Value across all sites |
+| TIV | Total Insured Value across all sites, taken from the Loss Estimate tab of each site's latest survey |
 | Last Survey | Date of the most recent survey |
-| Next Survey | Date of the next scheduled survey |
+| Next Survey | Date of the next scheduled survey (set automatically) |
 
 **Policy Details**
 

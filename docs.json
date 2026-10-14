@@ -41,7 +41,8 @@
         "group": "Navigation",
         "pages": [
           "the-navigation-menu",
-          "records-and-tabs"
+          "records-and-tabs",
+          "currency"
         ]
       },
       {
@@ -51,6 +52,8 @@
           "adding-clients",
           "bulk-importing-clients",
           "the-client-record",
+          "contacts-and-client-portal-access",
+          "previewing-the-client-portal",
           "creating-sites",
           "bulk-importing-sites",
           "the-site-record"
@@ -62,9 +65,14 @@
         "pages": [
           "creating-survey-records",
           "the-survey-record",
+          "survey-details",
+          "exporting-survey-reports",
+          "issuing-a-survey-report",
+          "offline-surveys",
           "overview-of-surveys-and-statuses",
           "cope",
           "recommendations",
+          "the-recommendation-record",
           "insured-values-and-loss-estimates",
           "risk-classifications-and-scoring"
         ]
@@ -86,6 +94,14 @@
           "user-roles-and-permissions",
           "creating-and-managing-users",
           "team-management"
+        ]
+      },
+      {
+        "group": "Help and support",
+        "icon": "life-ring",
+        "pages": [
+          "faqs",
+          "contact-us"
         ]
       }
     ]
@@ -109,15 +125,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {

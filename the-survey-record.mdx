@@ -7,19 +7,30 @@ The survey record is where engineers capture and manage all findings for a speci
 
 ## Header
 
-The top of the record shows the survey name and the site and client it belongs to ("for [Site] of [Client]"). Two actions are always available:
+The top of the record shows the survey name and the site and client it belongs to ("for [Site] of [Client]"). A cloud icon after the site and client name shows that the survey is [available offline](/offline-surveys).
 
+The following actions are available in the header:
+
+- **Export** — download the survey as a **Survey Report** or **Closeout Report**. See [Exporting survey reports](/exporting-survey-reports).
 - **Edit Survey** — update survey details such as status, visit date, type, or assigned engineer
-- **`···`** menu — additional options including deleting the survey
+- **`···`** menu — additional options:
+  - **Copy Survey** — start a new survey for the site using this survey's data. See [Copying a survey](/creating-survey-records#copying-a-survey).
+  - **Make available Offline** (or **Remove from offline mode**) — see [Working offline](/offline-surveys).
+  - **Delete Survey**
 
 ## Tabs
 
 <AccordionGroup>
   <Accordion title="Survey Overview">
     The default view. Shows:
-    - **Documents** — files attached to this survey. Use **Add Document** to upload reports, photos, or supporting materials.
+    - **Documents** — files attached to this survey. Use **Add Document** to upload reports, photos, or supporting materials. Documents are shared with the client once the survey's status is **Report issued** and the client has portal access — see [Issuing a survey report](/issuing-a-survey-report).
     - **Recent Updates** — a live feed of changes to this record.
     - **Survey Details** — key survey information displayed in the right panel (see below).
+  </Accordion>
+  <Accordion title="Survey Details">
+    The survey's written findings and site information — Acknowledgement, Executive Summary, Positives, Observations, Loss History, Major Updates, Utilities, and Business Interruption.
+
+    See [Survey details](/survey-details) for more detail.
   </Accordion>
   <Accordion title="Recommendations">
     All recommendations raised as part of this survey. Includes summary cards for Status, Priority, and Estimated Loss, plus a filterable table showing each recommendation's risk level, priority, loss estimate, and status.
@@ -32,7 +43,12 @@ The top of the record shows the survey name and the site and client it belongs t
     See [COPE](/cope) for detail on completing COPE data.
   </Accordion>
   <Accordion title="Loss Estimate">
-    Loss estimates associated with this survey. Add and manage estimates of potential loss before and after recommendations are completed.
+    The site's total insured values and three loss scenarios (NLE, PML, and EML). See [Insured values and loss estimates](/insured-values-and-loss-estimates) for more detail.
+  </Accordion>
+  <Accordion title="Risk Classification">
+    The survey's risk scores, including the Overall Score, a current-to-potential chart by risk element, and the Risk Elements table.
+
+    See [Risk classifications and scoring](/risk-classifications-and-scoring) for more detail.
   </Accordion>
   <Accordion title="Change Log">
     A full audit trail of all changes made to this survey record.

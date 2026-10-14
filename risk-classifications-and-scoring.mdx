@@ -4,19 +4,41 @@ description: "How risk classifications and scores work in TruRisk surveys."
 icon: "gauge-high"
 ---
 
-Risk classifications are how engineers rate the quality of risk controls and conditions at a site. Scores from individual classifications roll up into an overall survey score, which in turn drives the TruRisk Score for the site and client.
+Risk classifications are how engineers rate the quality of risk controls and conditions at a site. Scores from individual classifications roll up into an overall survey score, which in turn drives the score for the site and client.
 
-To enter classifications, open a survey record and go to the **Risk Classification** tab, then click **Add Risk Classification**.
+To view a survey's classifications, open the survey record and go to the **Risk Classification** tab. The tab opens in view mode. To enter or change classifications, click **Edit Risk Classification**.
 
 <Info>
   The specific risk elements available depend on the survey type. Different survey types have different classification structures and scoring methodologies.
 </Info>
 
+## Score overview
+
+The top of the Risk Classification tab gives you an at-a-glance summary of the survey's score. It's shown for every survey type.
+
+### Overall Score
+
+The **Overall Score** card shows the survey's **current** score and classification alongside its **potential** score and classification — the score the site could reach if the recommended improvements are made.
+
+Below the scores are three figures:
+
+| Figure | Description |
+|--------|-------------|
+| Improvement gap | The difference between the potential and current scores |
+| Recommendations | The number of recommendations linked to the survey's risk elements |
+| Still open | How many of those recommendations are still open |
+
+### Current to Potential, by Element
+
+This radar chart compares the current and potential scores for each **top-level** risk element, with one axis per element. The current score is filled in the colour of the survey's current classification (for example, green for Above Standard or red for Poor), with the potential score shown in grey behind it. The bigger the gap between the two shapes on an axis, the more room for improvement in that element.
+
 ## Risk elements
 
 The Risk Classification page displays a hierarchical table of **Risk Elements** — the categories and sub-categories that the engineer scores. The specific elements available depend on the survey type configured for that survey.
 
-The table columns also vary by survey type, as described in the sections below.
+The **Recs** column shows how many recommendations are linked to each element and how many of them are still open.
+
+The other table columns vary by survey type, as described in the sections below.
 
 ## Property surveys
 
@@ -67,7 +89,7 @@ A free-text narrative can be added to any classification level using the **Add N
 
 ## Engineer classification override
 
-Below the Risk Elements table is an **Engineer Classification** section. This allows the engineer to manually override the calculated overall classification with their own professional judgement — for example, if they believe the calculated score doesn't fully reflect the site's risk profile. A narrative can also be added to explain the override.
+Below the Risk Elements table is an **Engineer Classification** section. It's always shown in edit mode; in view mode it only appears if the engineer has entered an override. This allows the engineer to manually override the calculated overall classification with their own professional judgement — for example, if they believe the calculated score doesn't fully reflect the site's risk profile. A narrative can also be added to explain the override.
 
 ## How scores roll up
 
@@ -77,4 +99,4 @@ Scores from individual risk classifications feed into a broader scoring hierarch
 2. **Site score** — the score from the site's most recent survey becomes the current score for that site.
 3. **Client score** — calculated as the weighted average of all sites in the client record, weighted by each site's **Total Insured Value (TIV)**. Sites with higher TIV have a proportionally greater influence on the client's overall score.
 
-The resulting scores are displayed as the **TruRisk Score** on the site record and client record.
+The resulting scores are displayed as the **Site Score** on the site record and the **Client Score** on the client record.

@@ -34,9 +34,28 @@ Surveys are always created at the site level. Each survey captures the findings 
   </Step>
 </Steps>
 
+<Warning>
+  A site can only have one open survey at a time. If the site already has a survey with any status other than **Report Issued**, you can't start a new survey for it — either from scratch or by copying — until that survey's report is issued.
+</Warning>
+
+## Copying a survey
+
+When you return to a site you've surveyed before, you don't need to start from scratch. Copying a survey creates a new survey for the same site, pre-filled with the data from the previous one, so you only need to update what's changed since the last visit.
+
+You can copy a survey in two ways:
+
+- **From an existing survey** — click the **`···`** menu on the survey (in the Surveys list or the survey record header) and select **Copy Survey**.
+- **When adding a survey** — if you create a new survey for a site that already has a survey, you'll be given the option to copy the existing one.
+
+### What gets copied
+
+All fields are copied to the new survey, with one exception: only **open** recommendations are carried across. Recommendations that were closed on the previous survey stay with that survey.
+
+Open recommendations aren't duplicated — the same recommendation is linked to both the previous survey and the new one, so its full history is kept in one place.
+
 ## Survey types
 
-The **Type** field determines which risk classifications and scoring categories are available within the survey, and which Word export template is used when generating the report.
+The **Type** field determines which risk classifications and scoring categories are available within the survey, and which template is used when exporting the full Survey Report (see [Exporting survey reports](/exporting-survey-reports)).
 
 | Type | Use for |
 |------|---------|

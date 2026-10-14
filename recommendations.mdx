@@ -7,6 +7,8 @@ Recommendations are the actionable findings raised as part of a survey. Each rec
 
 Recommendations are created from the **Recommendations** tab on a survey record. They also roll up to the site record and client record so engineers and clients can track them across the portfolio.
 
+To view, update, or respond to an existing recommendation, see [The recommendation record](/the-recommendation-record).
+
 ## Adding a recommendation
 
 From the survey's **Recommendations** tab, click **+ Add Recommendation**.
@@ -31,7 +33,16 @@ From the survey's **Recommendations** tab, click **+ Add Recommendation**.
 
 ### Risk classification
 
-Select the **Risk Classification** category from the dropdown. This groups the recommendation by the area of risk it relates to (e.g. fire protection, management).
+Select the **Risk Classification** category from the dropdown, and then the **Sub Classification** within it. This links the recommendation to the risk element it relates to (for example, *Protection → Manual fire fighting measures / hose reels + hydrants*).
+
+### Recommendation type
+
+Select the type of improvement the recommendation calls for:
+
+| Type | Use when |
+|------|----------|
+| **CapEx** | Completing the recommendation requires capital expenditure — for example, building something or installing a physical protection system |
+| **Human Element** | The recommendation is about processes or management practices — better risk management on site by staff |
 
 ### Risk category
 
@@ -63,8 +74,14 @@ The matrix is colour-coded green (low), amber (medium), and red (high). Selectin
 
 | Field | Notes |
 |-------|-------|
-| Priority | The urgency of the recommendation (e.g. High, Medium, Low) |
+| Priority | The urgency of the recommendation: Critical (P1), Significant (P2), or Advisory (P3) |
 | Client Classification | Internal classification label for the client-facing report |
+
+| Priority | Meaning |
+|----------|---------|
+| **Critical (P1)** | Imminent deficiencies that need immediate attention — for example, physical inadequacies that significantly expose the site or company to higher risk, or deficiencies in processes and practices that are readily rectified |
+| **Significant (P2)** | Procedural or physical deficiencies that need attention once plans are in place to address Priority 1 items |
+| **Advisory (P3)** | Procedural or physical deficiencies that need attention once plans are in place to address Priority 1 and 2 items |
 
 ### Finding description
 
@@ -76,29 +93,101 @@ A rich-text field for the recommended corrective action. This text appears in th
 
 ### Loss estimates
 
-An expandable section for attaching a loss estimate value to this recommendation — the expected cost of the loss if the finding is not addressed.
+An expandable section for estimating the financial impact of the recommendation:
+
+| Field | Description |
+|-------|-------------|
+| Cost to Complete | The estimated cost of implementing the recommendation |
+| Before Completion | The estimated loss if the recommendation is **not** implemented |
+| After Completion | The estimated loss once the recommendation has been implemented |
+
+For each value, you can enter a single estimate, a range, or both.
 
 ### Recommendation contact
 
-Assign a site contact to this recommendation. Useful for tracking who is responsible for implementation.
+Assign a client contact to this recommendation. The contact is responsible for implementation and receives an email notification whenever an engineer posts a response on the recommendation.
+
+## Recommendation statuses
+
+Recommendations are tracked through to completion, with their status updated at each review. A recommendation can have one of the following statuses:
+
+- New
+- In Progress
+- Under Review
+- No Progress
+- Pending Verification
+- Completed
+- Declined
+- Superseded
+- Withdrawn
+
+New recommendations default to **New**.
 
 ## The recommendations list
 
-The **Recommendations** tab shows all recommendations for a survey in a filterable table.
+Recommendations are listed in a filterable table — on the main **Recs** page, and on the **Recommendations** tab of client, site, and survey records.
 
 | Column | Description |
 |--------|-------------|
 | Reference | Auto-generated ID |
 | Risk Level | The calculated risk score from the matrix |
 | Recommendation | Short summary of the recommendation |
-| Priority | High / Medium / Low |
+| Priority | Critical (P1), Significant (P2), or Advisory (P3) |
 | Loss Est. | Estimated loss value |
 | Status | Current recommendation status |
 
-Filter by **Year**, **Risk Category**, **Priority**, or **Status**. Use the search bar to find specific recommendations by keyword.
+### Filtering recommendations
+
+Every recommendations table in TruRisk — the main **Recs** page and the Recommendations tab on client, site, and survey records — has the same set of filters. Filters that don't apply in context are hidden (for example, the **Client** filter isn't shown on a client record).
+
+| Filter | Description |
+|--------|-------------|
+| Search | Find recommendations by keyword |
+| Year | The year the recommendation was raised |
+| Country | The country of the client or site |
+| Risk Level | Pick a single cell on the risk matrix to show recommendations with that risk level (see below) |
+| Survey Type | The type of survey the recommendation was raised in |
+| Classification | The recommendation's risk classification, selected from the classification tree |
+| Priority | Critical (P1), Significant (P2), or Advisory (P3) |
+| Client | The client the recommendation belongs to |
+| Status | The recommendation's current status |
+| Overdue | Toggle on to show only overdue recommendations |
+
+#### Filtering by risk level
+
+The **Risk Level** filter opens the risk matrix. Each cell combines a consequence rating (columns) with a probability rating (rows). Click a single cell to filter by that risk level — the selected level is shown as the **Calculated Risk**. Click **Clear** to remove the filter.
+
+| Consequences | Probability |
+|--------------|-------------|
+| A – Not Significant | 1 – Impractical |
+| B – Minor | 2 – Not Likely |
+| C – Moderate | 3 – Possible |
+| D – Major | 4 – Likely |
+| E – Severe | 5 – Certain |
+
+#### Overdue recommendations
+
+A recommendation is overdue when its due date has passed and it is still open. Declined, Withdrawn, and Superseded recommendations are never counted as overdue.
+
+Overdue recommendations are highlighted in the table with a red **due [time] ago** label under their status. Turn on the **Overdue** toggle to show only these recommendations.
 
 The summary cards at the top of the tab show an aggregate breakdown of recommendations by **Status**, **Priority**, and **Estimated Loss Before Completion**.
 
 <Tip>
-  Use the currency toggle (¥££) in the top-right of the tab to switch the displayed currency for loss estimate values.
+  Loss estimate values are shown in your preferred currency. See [Currency preference](/currency).
 </Tip>
+
+## Exporting recommendations
+
+You can export recommendations in three ways:
+
+| From | How |
+|------|-----|
+| **A single recommendation** | Open the recommendation and click **Export**, then choose **Microsoft Word (.docx)** or **Comma-separated values (.csv)**. |
+| **A recommendations table** | Tick the checkboxes next to the recommendations you want (or the checkbox in the header to select all), then click **Export** in the bar above the table. |
+| **A site** | On the site record, open the **`···`** menu and select **Export Recommendations** to export all of that site's recommendations. |
+
+<Tip>
+  Apply filters before selecting recommendations in a table — for example, filter to **Overdue** or a single **Priority** — to export just the set you need.
+</Tip>
+
