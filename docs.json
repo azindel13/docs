@@ -35,7 +35,8 @@
           "how-to-register-an-account",
           "logging-in-to-the-portal",
           "creating-a-password"
-        ]
+        ],
+        "icon": "circle-play"
       },
       {
         "group": "Navigation",
@@ -43,7 +44,8 @@
           "the-navigation-menu",
           "records-and-tabs",
           "currency"
-        ]
+        ],
+        "icon": "sidebar"
       },
       {
         "group": "Clients & Sites",
