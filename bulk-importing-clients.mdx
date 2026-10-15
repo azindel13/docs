@@ -69,12 +69,172 @@ To fix errors, correct the relevant rows in your file and re-run the import. Onl
 | Company Description | A short free-text summary of the client's business, e.g. what they make or do and their main operations. |
 | Company Account Number | Your internal or broker/insurer reference for the client, such as a policy or account number. Free text, so leading zeros and letters are kept. |
 | Company SIC Code | The Standard Industrial Classification code for the client's main activity. Enter the numeric code only (e.g. `2511`), without the description, and format the column as text so leading zeros aren't dropped. The SIC code drives occupancy in TruRisk. |
-| Company Sector | The broad industry sector the client operates in (e.g. Manufacturing, Retail, Logistics). |
+| Company Sector | The industry sector the client operates in. The value must exactly match one of the sectors available on the client record (see [Sector values](#sector-values) below), e.g. `Manufacturing - Food & Drink`. |
 | Company Currency | The client's currency, entered as a three-letter ISO 4217 code (e.g. `GBP`, `USD`, `EUR`). Defaults to the account currency if not provided. |
 | Company Post Code | The postal or ZIP code of the client's headquarters. |
 | Company Address Line 1 | The first line of the headquarters address, usually the building number and street. |
 | Company Address Line 2 | Any additional address detail, such as a unit, estate or town. |
 | Company GPS Coordinates | The headquarters location as a latitude/longitude pair in decimal degrees, latitude first, separated by a comma (e.g. `51.5074, -0.1278`). Use a minus sign for south latitudes and west longitudes rather than N/S/E/W letters, and don't use degrees-minutes-seconds. |
+
+
+### Sector values
+
+The **Company Sector** value must match one of the following exactly, including spacing and punctuation. These are the same options as the **Sector** field when editing a client.
+
+<Accordion title="Show all sector values">
+- Accountant
+- Agricultural
+- Agriculture
+- Agrifood
+- Aquaculture
+- Architect
+- Association
+- Auctioneer and Valuer
+- Bio-Tech
+- Bluewater Operators
+- Building Contractors inc D & C
+- Car Dealerships
+- Care
+- Care Home Corporate
+- Charity
+- Chemical Industry
+- Chemicals
+- Chemicals & Plastics
+- Chicken Processing
+- Civil Work
+- Commercial Fishing Operations
+- Computing and IT Consultants
+- Construction
+- Construction - Miscellaneous
+- Construction Services
+- Consultant - General
+- Dairy Producer
+- Doctors Surgery
+- Domiciliary Care
+- Domiciliary Care Corporate
+- Downstream
+- Dredging / Wet Construction
+- Education
+- Egg Processing
+- Energy Management
+- Engineer - Civil
+- Engineer - Consultant
+- Engineer - Electrical
+- Engineer - Mechanical
+- Engineer - Multi discipline
+- Engineer - Structural
+- Equestrian Bloodstock
+- Factory
+- Financial Adviser
+- Financial Services
+- Fine Art & Antique Dealers
+- Fuel Storage
+- Fund Manager
+- Garden/Landscape
+- Government
+- Gym Sector
+- Health and Leisure Club
+- Health and Safety Consultant
+- High Technology
+- Hog Producer
+- Hospitality
+- Hotel
+- Hydro Power
+- Inland River Tug & Barge Operations
+- Ins. Company
+- Interior Designer
+- Investment Fund or Trust
+- Laboratories - Asbestos
+- Laboratories - Other
+- Large Business
+- Legal Consultant
+- Leisure
+- Livestock
+- Luxury Goods
+- Management Consultant
+- Manufacturing
+- Manufacturing - Electronics
+- Manufacturing - Food & Drink
+- Manufacturing - General
+- Manufacturing - Health Food & Drink
+- Manufacturing - Metal Forming
+- Manufacturing - Plastics
+- Meat Processing
+- Media and Advertising
+- Media Marketing
+- Medical Devices
+- Medical Profession
+- Micro Care Home
+- Micro Doctors Surgery
+- Micro Domiciliary Care
+- Midstream
+- Mining
+- Misc. Profession - Commercial
+- Misc. Profession - Other
+- Mitigation
+- Motor Trader
+- Museum
+- Natural Resources
+- Not For Profit Company
+- Not In Employment
+- Office
+- Offshore Supply Vessels & Workboats
+- Other
+- Pharmaceutical
+- Plant Hires
+- Port Authorities
+- Ports
+- Power & Energy
+- Printer - Copying Services
+- Printer - General
+- Printer - Imaging Centre
+- Property Consultants
+- Property Developers / Construction
+- Property Owners
+- Property Services - Miscellaneous
+- Public Entity
+- Public House
+- Publisher
+- Pubs & Restaurants
+- Pulp & Paper
+- Real Estate
+- Recruitment Consultant
+- Renewables
+- Restaurant
+- Retail
+- Retail, Distribution & Logistics
+- Retail Shop
+- Retired
+- Scheme
+- Shippers and Packers
+- Shops (Various including food)
+- SME
+- Solicitors
+- Space (pre-launch)
+- Specialty
+- Sport and Wellness
+- Sports
+- Sports Club or Association
+- Sports & Leisure
+- Sports - Professional
+- Steel
+- Stockbroker
+- Surveyor and Valuation
+- Taxi
+- Technology - Other
+- Telecoms
+- Textiles
+- Transportation Systems
+- Transport - Logistics
+- Travel & Tourism
+- Trustee and Trust Company
+- Upstream
+- Utilities
+- Vessel & Offshore Construction
+- Waste Recycling
+- Wholesale
+- Woodworkers
+</Accordion>
 
 ### Site fields
 
