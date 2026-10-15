@@ -69,7 +69,7 @@ To fix errors, correct the relevant rows in your file and re-run the import. Onl
 | Company Description | A short free-text summary of the client's business, e.g. what they make or do and their main operations. |
 | Company Account Number | Your internal or broker/insurer reference for the client, such as a policy or account number. Free text, so leading zeros and letters are kept. |
 | Company SIC Code | The US Standard Industrial Classification (SIC) code for the client's main activity. Enter the four-digit code only (e.g. `2511`), without the description. Some codes start with a zero (e.g. `0111` for wheat farming), so format the column as text so the leading zero isn't dropped. The SIC code drives occupancy in TruRisk. |
-| Company Sector | The industry sector the client operates in. The value must exactly match one of the sectors available on the client record (see [Sector values](#sector-values) below), e.g. `Manufacturing - Food & Drink`. |
+| Company Sector | Optional. The industry sector the client operates in. The value should exactly match one of the sectors available on the client record (see [Sector values](#sector-values) below), e.g. `Manufacturing - Food & Drink`. |
 | Company Currency | The client's currency, entered as a three-letter ISO 4217 code (e.g. `GBP`, `USD`, `EUR`). Defaults to the account currency if not provided. |
 | Company Post Code | The postal or ZIP code of the client's headquarters. |
 | Company Address Line 1 | The first line of the headquarters address, usually the building number and street. |
@@ -80,6 +80,10 @@ To fix errors, correct the relevant rows in your file and re-run the import. Onl
 ### Sector values
 
 The **Company Sector** value must match one of the following exactly, including spacing and punctuation. These are the same options as the **Sector** field when editing a client.
+
+<Note>
+  Sector is optional on import so that a client isn't rejected just because its sector isn't on the list. If it's left blank, the client is created without a sector. Sector is required on the **Edit Client** form, though, so you'll need to choose one the next time you edit the client's details.
+</Note>
 
 <Accordion title="Show all sector values">
 - Accountant
