@@ -7,6 +7,9 @@
     "light": "#e30513",
     "dark": "#1d242b"
   },
+  "appearance": {
+    "default": "light"
+  },
   "favicon": "/favicon.svg",
   "navigation": {
     "global": {
