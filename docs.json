@@ -122,13 +122,14 @@
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://app.trurisk.io"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:help@trurisk.io"
+        "label": "Get Help",
+        "href": "/contact-us"
       }
     ],
     "primary": {
