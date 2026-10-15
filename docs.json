@@ -73,7 +73,7 @@
           "offline-surveys",
           "overview-of-surveys-and-statuses",
           "cope",
-          "recommendations",
+          "creating-and-managing-recommendations",
           "the-recommendation-record",
           "insured-values-and-loss-estimates",
           "risk-classifications-and-scoring"
@@ -143,5 +143,11 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/recommendations",
+      "destination": "/creating-and-managing-recommendations"
+    }
+  ]
 }
