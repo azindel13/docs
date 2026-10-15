@@ -9,11 +9,16 @@ The **Loss Estimate** tab on a survey record captures the financial exposure of 
 - **Total Insured Value** — the insured values for the site, broken down by asset category
 - **Loss Scenarios** — the estimated loss under three scenarios, calculated from the insured values
 
-To get started, open the survey record and go to the **Loss Estimate** tab. All fields can be edited directly on the tab, and totals update automatically as you type.
+## Adding a loss estimate
+
+1. Open the survey record and go to the **Loss Estimate** tab.
+2. Click **Add Loss Estimate**. The **Edit Loss Estimate Details** page opens.
+3. Enter the insured values and damage percentages, as described below. All totals and percentages update automatically as you type.
+4. Click **Save Changes** to save the loss estimate, or **Cancel** to discard your changes.
 
 ## Total insured value (TIV)
 
-Enter the insured value for each asset category:
+Enter the insured value for each asset category. Values are entered in the client's currency, which is shown next to the section heading (for example, *All values in USD*).
 
 | Category | Description |
 | --- | --- |
@@ -32,6 +37,8 @@ The **TIV Calculations** panel beside the inputs works out the combined values f
 | Content | Stock + Machinery & Equipment |
 | Property | Building + Content |
 | Total insured value | Property + Business interruption + Other |
+
+<img src="/images/guide/loss-estimate-tiv.png" alt="The Total Insured Value section with the TIV Calculations panel" />
 
 <Info>
   The total insured value is shown as **Total Insured Value** in the Survey Info panel on the survey record. The TIV from a site's **latest** survey is also used as the site's TIV, and feeds the client's TIV and the TIV-weighted Client Score.
@@ -67,6 +74,8 @@ If you type a value that isn't a multiple of 10, the bar rounds to the nearest 1
 
 The **Damage value** for each row is calculated automatically as the sum insured multiplied by the damage percentage.
 
+<img src="/images/guide/loss-estimate-scenario.png" alt="An expanded Normal Loss Expectancy scenario with damage percentages" />
+
 <Tip>
   Each scenario has its own set of percentages, so you can set different damage assumptions for NLE, PML, and EML.
 </Tip>
@@ -85,12 +94,12 @@ The remaining rows in each scenario are calculated for you:
 
 There are two types of narrative on the Loss Estimate tab:
 
-- **Loss estimate narrative** — a general free-text narrative for documenting your overall methodology, assumptions, or commentary on the loss estimates
+- **Overall loss estimate narrative** — a general free-text narrative for documenting your overall methodology, assumptions, or commentary on the loss estimates
 - **Scenario narratives** — one for each loss scenario (NLE, PML, and EML), so you can explain the assumptions behind that specific estimate right next to the percentages it justifies
 
-### Adding the loss estimate narrative
+### Adding the overall loss estimate narrative
 
-1. Below the loss scenarios, click **Add general loss estimate narrative**.
+1. Below the loss scenarios, click **Add Overall Loss Estimate Narrative**.
 2. Write your narrative in the text editor, then close the editor to save it.
 
 Once a narrative has been written, it's shown in its own section below the loss scenarios.
@@ -98,7 +107,7 @@ Once a narrative has been written, it's shown in its own section below the loss 
 ### Adding a scenario narrative
 
 1. Expand the scenario.
-2. Below the damage table, click **Add [scenario] narrative** (for example, **Add normal loss expectancy narrative**).
+2. Below the damage table, click **Add [scenario] Narrative** (for example, **Add Normal Loss Expectancy Narrative**).
 3. Write your narrative in the text editor, then close the editor to save it.
 
 Once saved, the section shows the start of your narrative with an **Edit narrative** button so you can update it later.
