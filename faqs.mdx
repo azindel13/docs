@@ -113,7 +113,10 @@ description: "Answers to common questions about using the TruRisk Risk Engineer 
     Automatically — you don't need to enter it.
   </Accordion>
   <Accordion title="How is a client's score calculated?">
-    Each site's score comes from the **Risk Classification** scoresheet of its most recent survey. The client's score is the average of its sites' scores, weighted by each site's Total Insured Value — so higher-value sites have more influence. See [How scores roll up](/risk-classifications-and-scoring#how-scores-roll-up).
+    Each site's score comes from the **Risk Classification** scoresheet of its most recent survey with a status of **Report issued**. The client's score is the average of its sites' scores, weighted by each site's Total Insured Value — so higher-value sites have more influence. See [How scores roll up](/risk-classifications-and-scoring#how-scores-roll-up).
+  </Accordion>
+  <Accordion title="Why hasn't the site or client classification changed after I updated a survey?">
+    Site and client classifications and scores only update when the survey's status is set to **Report issued**. Until then, they still reflect the previous issued survey, even if you've changed the survey's Risk Classification tab. See [How scores roll up](/risk-classifications-and-scoring#how-scores-roll-up).
   </Accordion>
   <Accordion title="Why are values showing in a different currency?">
     Values are shown either in your **preferred currency** or in each **client's local currency** (set on the client record, usually based on locale). Use the currency button at the top of the screen to switch between them. Conversion is for display only — the original values are never changed. See [Currency preference](/currency).

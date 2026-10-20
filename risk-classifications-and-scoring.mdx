@@ -98,7 +98,11 @@ Below the Risk Elements table is an **Engineer Classification** section. It's al
 Scores from individual risk classifications feed into a broader scoring hierarchy:
 
 1. **Survey score** — the weighted average of all top-level risk elements in the survey (the Overall row).
-2. **Site score** — the score from the site's most recent survey becomes the current score for that site.
+2. **Site score** — the score from the site's most recent survey with a status of **Report issued** becomes the current score for that site.
 3. **Client score** — calculated as the weighted average of all sites in the client record, weighted by each site's **Total Insured Value (TIV)**. Sites with higher TIV have a proportionally greater influence on the client's overall score.
 
 The resulting scores are displayed as the **Site Score** on the site record and the **Client Score** on the client record.
+
+<Warning>
+  Site and client classifications and scores only update when a survey's status is set to **Report issued**. While a survey is in any other status, changes you make on its Risk Classification tab are saved to the survey but don't change the site or client classification. If the site or client record still shows the old classification, check the survey's status. See [Issuing a survey report](/issuing-a-survey-report).
+</Warning>
