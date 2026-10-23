@@ -1,0 +1,48 @@
+---
+title: "Third-party survey agencies"
+description: "How to assign surveys to a third-party survey agency, and what the agency can and can't do."
+---
+
+If you often use contractor engineers or surveyors to carry out surveys on your behalf, you can assign surveys to a **third-party survey agency**. The agency completes the survey in its own portal, then hands it back to you for review. You keep control of issuing the report to the client.
+
+<Info>
+  Third-party survey agencies need to be activated for your risk engineering account. If you need help setting this up, contact your TruRisk administrator.
+</Info>
+
+## How it works
+
+Once one or more agencies have been added to your account, they appear as options in the **Survey Company** field when you create or edit a survey.
+
+<Steps>
+  <Step title="Assign the survey to the agency">
+    Create the survey as normal (see [Creating survey records](/creating-survey-records)), or open an existing survey and click **Edit Survey**. Select the agency in the **Survey Company** field and save.
+
+    The **Assigned Engineer** field isn't shown when an agency is selected. This is because the agency assigns the survey to one of its own engineers, not to a user in your account.
+  </Step>
+  <Step title="The agency assigns an engineer">
+    The agency admin is notified that a survey has been assigned to their agency. They assign it to one of their engineers in the agency portal.
+  </Step>
+  <Step title="The agency completes the survey">
+    The agency engineer completes the survey. When it's ready, they set the survey's status to **Review**.
+  </Step>
+  <Step title="You review the survey">
+    You receive an email to let you know the survey is ready for review. Open the survey, review the agency's work and make any changes needed.
+  </Step>
+  <Step title="Issue the report">
+    When you're happy with the survey, issue the report to the client as normal. See [Issuing a survey report](/issuing-a-survey-report).
+  </Step>
+</Steps>
+
+## The agency portal
+
+Each agency has its own portal with its own users, managed by a nominated agency admin. In the agency portal, the agency and its users can see the surveys that have been assigned to their agency. The agency admin assigns each survey to one of the agency's engineers.
+
+## What agencies can and can't do
+
+| Agency users can | Agency users can't |
+| --- | --- |
+| See surveys assigned to their agency | Issue a survey report to the client |
+| Assign a survey to one of the agency's engineers (agency admin) | Edit a survey once its status is **Report issued** |
+| Complete the survey and set its status to **Review** | See client or site information beyond what's in the survey assigned to them |
+
+Only the survey owner (the user who created the survey) or an admin in your TruRisk account can issue the report to the client. Agency users only see what's in the survey record assigned to them, so the rest of your client data stays private to your account.
